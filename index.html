@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Bay Area Anime Music (BAAM) — Bay Area nonprofit network of anime musicians & live Japanese music scene. Upcoming: Halloweeb on Oct 30, 2026 at Quarter Note Bar &amp; Grill — live anime music with Merry Go Station, Guy Jeans, and Velvet Turtles." />
+<meta property="og:title" content="Bay Area Anime Music — Halloweeb, Oct 30, 2026 at Quarter Note Bar &amp; Grill" />
+<meta property="og:description" content="Halloweeb — Oct 30, 2026 at Quarter Note Bar &amp; Grill. A Halloween party concert by Bay Area Anime Music with Merry Go Station, Guy Jeans, and Velvet Turtles. Doors 7:30 PM, music 8:00 PM, $15 NOTAFLOF." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bayareaanimemusic.org/" />
+<link rel="icon" href="data:," />
+<title>Bay Area Anime Music — Live Anime, J-Rock &amp; VGM in the Bay Area</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Halloweeb",
+  "startDate": "2026-10-30T20:00:00-07:00",
+  "doorTime": "2026-10-30T19:30:00-07:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Quarter Note Bar & Grill",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1214 Apollo Way",
+      "addressRegion": "CA",
+      "postalCode": "94085",
+      "addressCountry": "US"
+    }
+  },
+  "description": "A Halloween party concert by Bay Area Anime Music with live anime music bands, Persona x JoJo theme, a costume contest and a JoJo pose contest during the band changeovers.",
+  "offers": [
+    {
+      "@type": "Offer",
+      "url": "https://www.zeffy.com/en-US/ticketing/halloweeb",
+      "price": 15,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://www.zeffy.com/en-US/ticketing/halloweeb",
+      "price": 0,
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  ],
+  "performer": [
+    {
+      "@type": "PerformingGroup",
+      "name": "Merry Go Station"
+    },
+    {
+      "@type": "PerformingGroup",
+      "name": "Guy Jeans"
+    },
+    {
+      "@type": "PerformingGroup",
+      "name": "Velvet Turtles"
+    }
+  ],
+  "organizer": {
+    "@type": "Organization",
+    "name": "Bay Area Anime Music",
+    "url": "https://bayareaanimemusic.org/"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f4ee; --bg2:#efe9dd; --surface:#ffffff; --surface2:#fbf9f4;
+  --ink:#17150f; --ink2:#4a463c; --muted:#6f6a5e; --line:#ddd5c4;
+  --red:#c9331f; --red-dark:#a32716; --teal:#0e6b62; --gold:#b7791f;
+  --nav-bg:rgba(247,244,238,.94); --booking-bg:#14120e; --booking-ink:#f3efe4; --booking-muted:#b9b2a0; --booking-line:#3a362c;
+  --chip:#efe9dd; --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#131210; --bg2:#1b1a16; --surface:#1e1d19; --surface2:#23221d;
+    --ink:#f0ecdf; --ink2:#cfc9b8; --muted:#9d9787; --line:#34322a;
+    --red:#e8604a; --red-dark:#e8604a; --teal:#3fb3a6; --gold:#d9a441;
+    --nav-bg:rgba(19,18,16,.94); --chip:#26241e;
+    --booking-bg:#0c0b09; --booking-ink:#f3efe4; --booking-muted:#a8a292; --booking-line:#2e2b24;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--red);text-decoration-color:rgba(0,0,0,0)}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.12;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+img{max-width:100%}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+.navrow{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+.brand{font-weight:900;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;line-height:1.05}
+.brand span{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+nav.main{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+nav.main a{color:var(--ink);font-weight:600;font-size:14.5px;padding:7px 10px;border-radius:8px;text-decoration:none}
+nav.main a:hover{background:var(--chip);text-decoration:none}
+.navbtns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;padding:10px 16px;border-radius:9px;border:2px solid var(--ink);text-decoration:none;cursor:pointer;background:var(--surface);color:var(--ink);transition:transform .12s ease, background .12s ease}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn.dark{background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent}
+.btn.small{padding:7px 12px;font-size:13.5px}
+
+/* Hero */
+.hero{border-bottom:2px solid var(--ink);background:var(--bg2)}
+.hero-inner{padding:52px 0 44px;max-width:820px}
+.hero h1{font-size:clamp(38px,6.5vw,64px);font-weight:900}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .lede{margin-top:16px;font-size:clamp(17px,2.4vw,20px);color:var(--ink2);max-width:640px}
+.hero .cta{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+.hero .meta{margin-top:22px;font-size:13.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+/* Sections */
+section.block{padding:52px 0}
+section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.sec-head h2{font-size:clamp(26px,4vw,36px);font-weight:800}
+.sec-head .count{font-family:"Archivo Narrow",sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.sec-sub{color:var(--ink2);max-width:680px;margin-bottom:24px}
+
+/* Filters */
+.filters{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0 22px}
+.filters button{font:inherit;font-size:13.5px;font-weight:700;padding:7px 13px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink2);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* Event cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px}
+.card.featured{border:2px solid var(--red)}
+.card .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.datebox{font-family:"Archivo Narrow",sans-serif;text-align:center;background:var(--ink);color:var(--bg);border-radius:9px;padding:7px 10px;line-height:1.05;flex:none}
+.datebox b{display:block;font-size:19px}
+.datebox span{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.type{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;background:var(--chip);color:var(--ink2);padding:5px 9px;border-radius:999px;white-space:nowrap}
+.type.concert{background:#f6ded9;color:#8f2413}
+@media (prefers-color-scheme: dark){.type.concert{background:#3d211b;color:#f0a08e}}
+.card h3{font-size:20px;font-weight:800}
+.card .venue{font-weight:600;font-size:14.5px;color:var(--ink2)}
+.card .lineup{font-size:15px}
+.card .lineup b{font-weight:700}
+.card .detail{font-size:14.5px;color:var(--ink2)}
+.card .foot{margin-top:auto;padding-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.price{font-weight:800;font-size:15px}
+.card a.more{font-weight:700;font-size:14.5px}
+.hidden-card{display:none}
+.empty-note{display:none;background:var(--surface);border:1.5px dashed var(--line);border-radius:var(--radius);padding:18px;color:var(--ink2);font-size:15px}
+.empty-note.show{display:block}
+
+/* Community strip */
+.strip{background:var(--teal);color:#fff;border-radius:18px;padding:30px 28px;display:grid;grid-template-columns:1.4fr .6fr;gap:22px;align-items:center}
+.strip h2{color:#fff;font-size:clamp(24px,3.6vw,32px);font-weight:800}
+.strip p{color:#dff2ef;margin-top:8px;max-width:560px}
+.strip .btn{background:#fff;border-color:#fff;color:#0b4f47;justify-self:end}
+@media (max-width:720px){.strip{grid-template-columns:1fr}.strip .btn{justify-self:start}}
+
+/* Two-col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.prose p+p{margin-top:14px}
+.prose{color:var(--ink2)}
+.prose b,.prose strong{color:var(--ink)}
+.video-box{background:var(--ink);color:var(--bg);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px;justify-content:center}
+.video-box h3{font-size:22px}
+.video-box p{color:var(--ink2);font-size:15px}
+@media (prefers-color-scheme: dark){.video-box p{color:#b9b2a0}}
+.video-box .btn{align-self:flex-start;background:var(--red);border-color:var(--red);color:#fff}
+
+/* Bands */
+.band-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.band{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:17px}
+.band h3{font-size:17.5px;font-weight:800}
+.band .genre{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);margin-top:2px}
+.band .played{font-size:14px;color:var(--ink2);margin-top:8px}
+.band .ig{font-size:14px;margin-top:8px;display:inline-block}
+
+/* Logo strips */
+.logostrip{display:flex;gap:10px;flex-wrap:wrap}
+.logostrip .pill{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 16px;font-weight:700;font-size:14.5px}
+
+/* Get involved */
+.gi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.gi{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:20px}
+.gi h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.gi p{font-size:15px;color:var(--ink2)}
+
+/* About lists */
+.deflist{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+.def{background:var(--surface2);border:1.5px solid var(--line);border-radius:var(--radius);padding:18px}
+.def h3{font-size:17px;font-weight:800}
+.def p{font-size:14.5px;color:var(--ink2);margin-top:6px}
+
+/* Booking */
+section.booking{background:var(--booking-bg);color:var(--booking-ink);padding:60px 0}
+section.booking .sec-head h2{color:var(--booking-ink)}
+section.booking .sec-head .count{color:#e8604a}
+section.booking .sec-sub{color:var(--booking-muted)}
+section.booking h3{color:var(--booking-ink)}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:20px 0 30px}
+.proj{border:1.5px solid var(--booking-line);border-radius:var(--radius);padding:18px;background:rgba(255,255,255,.02)}
+.proj h3{font-size:17px;font-weight:800}
+.proj p{font-size:14.5px;color:var(--booking-muted);margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:14px 0 30px}
+.step{border-top:3px solid #e8604a;padding-top:12px}
+.step b{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#e8604a}
+.step p{font-size:15px;color:var(--booking-muted);margin-top:5px}
+form.book{display:grid;grid-template-columns:1fr 1fr;gap:13px;background:rgba(255,255,255,.03);border:1.5px solid var(--booking-line);border-radius:var(--radius);padding:22px}
+@media (max-width:680px){form.book{grid-template-columns:1fr}}
+form.book label{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--booking-muted);display:block;margin-bottom:5px}
+form.book input,form.book select,form.book textarea{width:100%;font:inherit;font-size:15px;padding:10px 12px;border-radius:8px;border:1.5px solid var(--booking-line);background:#1d1b16;color:var(--booking-ink)}
+form.book .full{grid-column:1/-1}
+form.book .note{font-size:13.5px;color:var(--booking-muted)}
+form.book button{justify-self:start}
+.form-msg{display:none;font-size:14.5px;background:#2a2517;border:1.5px solid var(--gold);color:#f0d9a0;border-radius:9px;padding:11px 14px}
+.form-msg.show{display:block}
+
+/* Footer */
+footer.site{border-top:2px solid var(--ink);padding:38px 0 46px;background:var(--bg2)}
+.foot-grid{display:flex;gap:28px;flex-wrap:wrap;justify-content:space-between}
+footer.site h3{font-size:18px;font-weight:900}
+footer.site p,footer.site a{font-size:14.5px;color:var(--ink2)}
+footer.site a:hover{color:var(--red)}
+.foot-links{display:flex;flex-direction:column;gap:5px}
+.foot-bottom{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a class="brand" href="#top">Bay Area Anime Music<span>BAAM · Bay Area, CA</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#events">Events</a>
+      <a href="#community">Community</a>
+      <a href="#bands">Bands &amp; Musicians</a>
+      <a href="#get-involved">Get Involved</a>
+      <a href="#about">About</a>
+      <a href="#booking">Booking</a>
+    </nav>
+    <div class="navbtns">
+      <a class="btn red small" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join Discord</a>
+      <a class="btn dark small" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <h1>Live anime music, played by <em>Bay Area musicians</em>.</h1>
+      <p class="lede">Bay Area Anime Music (BAAM) is a Bay Area nonprofit network of anime musicians &amp; the live Japanese music scene — concerts, jam sessions, and community events across the Bay Area.</p>
+      <div class="cta">
+        <a class="btn red" href="#events">See upcoming events</a>
+        <a class="btn" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord</a>
+        <a class="btn ghost" href="#booking">Booking →</a>
+      </div>
+      <p class="meta">Anisong · J-Rock · J-Pop · VGM · Jazz &amp; Fusion — across the Bay Area</p>
+    </div>
+  </div>
+
+  <!-- UPCOMING EVENTS -->
+  <section class="block" id="events" style="padding-bottom:26px">
+    <div class="wrap">
+      <div class="sec-head"><h2>Upcoming Events</h2><span class="count">Listed here, on the main page</span></div>
+      <p class="sec-sub">Every BAAM event — concerts, jam sessions, live band karaoke, dueling pianos, panels, meetups, and busking sessions — is listed here first.</p>
+
+      <div class="filters" role="group" aria-label="Filter events by type">
+        <button type="button" data-filter="all" aria-pressed="true">All types</button>
+        <button type="button" data-filter="concert" aria-pressed="false">Concerts</button>
+        <button type="button" data-filter="jam" aria-pressed="false">Jam Sessions</button>
+        <button type="button" data-filter="karaoke" aria-pressed="false">Live Band Karaoke</button>
+        <button type="button" data-filter="pianos" aria-pressed="false">Dueling Pianos</button>
+        <button type="button" data-filter="festival" aria-pressed="false">Festival / Con</button>
+      </div>
+
+      <div class="grid" id="upcoming-grid">
+        <article class="card featured" id="halloweeb" data-type="concert">
+          <div class="top">
+            <div class="datebox"><b>30</b><span>Oct 2026</span></div>
+            <span class="type concert">Concert</span>
+          </div>
+          <h3><a href="halloweeb.html" style="color:inherit">Halloweeb</a></h3>
+          <p class="venue">Quarter Note Bar &amp; Grill</p>
+          <p class="detail"><b>Friday, October 30, 2026 · Doors 7:30 PM · Music 8:00 PM</b> · Persona × JoJo theme. A costume contest runs across the band changeovers, along with a JoJo pose contest.</p>
+          <p class="lineup"><b>Lineup:</b> Merry Go Station · Guy Jeans · Velvet Turtles</p>
+          <div class="foot">
+            <span class="price">$15 NOTAFLOF</span>
+            <a class="more" href="halloweeb.html">Event details →</a>
+            <a class="btn red small" href="https://www.zeffy.com/en-US/ticketing/halloweeb" target="_blank" rel="noopener">Tickets — Zeffy</a>
+          </div>
+        </article>
+
+        <article class="card" data-type="jam festival">
+          <div class="top">
+            <div class="datebox"><b>★</b><span>MAGWest</span></div>
+            <span class="type">Jam Session</span>
+          </div>
+          <h3>MAGWest Jam Session</h3>
+          <p class="venue">MAGWest · San Jose</p>
+          <p class="detail">BAAM's jam session at MAGWest — and anyone can join. Bring an instrument or just come listen: anime, J-Pop, J-Rock, City Pop, VGM, and everything in between, at every level.</p>
+          <div class="foot"><a class="more" href="#past">See past MAGWest jams ↓</a></div>
+        </article>
+
+        <article class="card" data-type="pianos festival">
+          <div class="top">
+            <div class="datebox"><b>★</b><span>MAGWest</span></div>
+            <span class="type">Dueling Pianos</span>
+          </div>
+          <h3>Dueling Pianos at MAGWest</h3>
+          <p class="venue">Steakhouse stage · MAGWest, San Jose</p>
+          <p class="detail">Multiple pianists, live on stage, taking song requests — anime and game favorites played back and forth in BAAM's dueling pianos performance at MAGWest.</p>
+          <div class="foot"><span class="detail">Part of MAGWest festival programming</span></div>
+        </article>
+      </div>
+      <p class="empty-note" id="upcoming-empty">No upcoming events of this type are listed right now — check the full list or join the Discord, where new events are planned.</p>
+    </div>
+  </section>
+
+  <!-- COMMUNITY STRIP -->
+  <section style="padding:14px 0 6px">
+    <div class="wrap">
+      <div class="strip">
+        <div>
+          <h2>The Discord is where BAAM lives between shows.</h2>
+          <p>Musicians and fans meet, plan events, form bands, share lead sheets, and post photos and clips from shows. Instagram is for announcements — the server is the community.</p>
+        </div>
+        <a class="btn" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAST EVENTS -->
+  <section class="block" id="past" style="padding-top:34px">
+    <div class="wrap">
+      <div class="sec-head"><h2>Past Events</h2><span class="count">The archive</span></div>
+      <p class="sec-sub">Recent first. Photos and videos live with each event — BAAM has no YouTube channel of its own, so show videos are linked where they were posted.</p>
+
+      <div class="grid" id="past-grid">
+        <article class="card" data-type="concert">
+          <div class="top"><div class="datebox"><b>26</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
+          <h3>Tokyo Arcade</h3>
+          <p class="venue">Quarter Note Bar &amp; Grill</p>
+          <p class="detail">An evening of VGM, anime, and Japanese jazz &amp; fusion.</p>
+          <p class="lineup"><b>Lineup:</b> Press Start · Interstellar Soundscapes · Studio Phoebe</p>
+          <div class="foot"><a class="more" href="https://www.eventbrite.com/e/tokyo-arcade-tickets-2001708576236" target="_blank" rel="noopener">Event listing →</a></div>
+        </article>
+
+        <article class="card" data-type="concert">
+          <div class="top"><div class="datebox"><b>12</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
+          <h3>J-Block Party</h3>
+          <p class="venue">DNA Lounge (Above) · San Francisco</p>
+          <p class="detail">BAAM and AniCLover teaming up for their first live band event together — three Bay Area anisong bands in one night.</p>
+          <p class="lineup"><b>Lineup:</b> Aimai Mirai · Petty Tactic · Half Past Midnight</p>
+          <div class="foot"><span class="price">$20 / $24 / $32</span><a class="more" href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">Event page →</a></div>
+        </article>
+
+        <article class="card" data-type="concert">
+          <div class="top"><div class="datebox"><b>Oct</b><span>2026</span></div><span class="type concert">Concert</span></div>
+          <h3>Fall J-Rock Fest</h3>
+          <p class="venue">Tamper Room · Fremont</p>
+          <p class="detail">A three-band J-Rock bill, with professional photography by @jiashaneva.</p>
+          <p class="lineup"><b>Lineup:</b> Food Coma · Petty Tactic · Aimai Mirai</p>
+          <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Photos on Instagram →</a></div>
+        </article>
+
+        <article class="card" data-type="jam festival">
+          <div class="top"><div class="datebox"><b>’24–’26</b><span>MAGWest</span></div><span class="type">Jam Session</span></div>
+          <h3>MAGWest Jam Sessions — 2024, 2025, 2026</h3>
+          <p class="venue">DoubleTree by Hilton · San Jose</p>
+          <p class="detail">BAAM sponsored the 2024 Japanese Music Open Jam/Karaoke, presented the 2025 Guided Jam Session, and ran the jam again in 2026 — a MAGWest tradition, every year.</p>
+          <div class="foot"><a class="more" href="https://www.youtube.com/watch?v=dbiYqEPXr-E" target="_blank" rel="noopener">Watch the 2025 jam →</a><a class="more" href="https://www.youtube.com/watch?v=qCUtaJKr_hg" target="_blank" rel="noopener">2024 jam →</a></div>
+        </article>
+
+        <article class="card" data-type="concert">
+          <div class="top"><div class="datebox"><b>19</b><span>Jul 2025</span></div><span class="type concert">Concert</span></div>
+          <h3>RocKosplay 2025</h3>
+          <p class="venue">Newark Pavilion · Newark</p>
+          <p class="detail">Anime concert + cosplay contest — four Bay Area J-Rock &amp; anime cover bands.</p>
+          <p class="lineup"><b>Lineup:</b> Kill the Protagonist · Food Coma · Project Idol · Otaku Ongaku</p>
+          <div class="foot"><span class="price">$25</span></div>
+        </article>
+
+        <article class="card" data-type="jam">
+          <div class="top"><div class="datebox"><b>14</b><span>Jun 2025</span></div><span class="type">Jam Session</span></div>
+          <h3>BAAM Jam</h3>
+          <p class="venue">Tamper Room Cafe &amp; Gallery · Fremont</p>
+          <p class="detail">Open anime jam session — bring your instrument and play your favorite anime tunes with other musicians. All levels welcome, lead sheets provided.</p>
+          <div class="foot"><a class="more" href="https://www.eventbrite.com/e/baam-jam-anime-jam-session-tickets-1376500683599" target="_blank" rel="noopener">Event listing →</a></div>
+        </article>
+
+        <article class="card" data-type="concert">
+          <div class="top"><div class="datebox"><b>7</b><span>Jun 2024</span></div><span class="type concert">Concert</span></div>
+          <h3>RocKosplay 2024</h3>
+          <p class="venue">3350 Scott Blvd, Building 54 · Santa Clara</p>
+          <p class="detail">BAAM's inaugural RocKosplay — live bands and cosplay, with event photos, band photos by Trey Wagner (@wagner_photo_), performance videos, and the full setlist in the gallery.</p>
+          <p class="lineup"><b>Lineup:</b> Kill the Protagonist · Aimai Mirai · Still Deer · Medium Spicy</p>
+          <div class="foot"><a class="more" href="https://bayareaanimemusic.org/rockosplay-24-gallery/" target="_blank" rel="noopener">Photo &amp; video gallery →</a></div>
+        </article>
+
+        <article class="card" data-type="karaoke">
+          <div class="top"><div class="datebox"><b>♪</b><span>Event</span></div><span class="type">Live Band Karaoke</span></div>
+          <h3>RocKaraoke</h3>
+          <p class="venue">BAAM live band karaoke event</p>
+          <p class="detail">Karaoke with a real band behind you — sing anime favorites with live musicians instead of a backing track.</p>
+          <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">See the Instagram Highlight →</a></div>
+        </article>
+
+        <article class="card" data-type="concert">
+          <div class="top"><div class="datebox"><b>♪</b><span>Event</span></div><span class="type concert">Concert</span></div>
+          <h3>ACG Rhapsody</h3>
+          <p class="venue">BAAM concert event</p>
+          <p class="detail">One of BAAM's concert events, archived in the @bayareaanimemusic Instagram Highlights.</p>
+          <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">See the Instagram Highlight →</a></div>
+        </article>
+      </div>
+      <p class="empty-note" id="past-empty">No past events of this type are in the archive yet.</p>
+      <p class="detail" style="margin-top:20px;color:var(--ink2);font-size:15px">BAAM event types also include <b>con panels</b> — including an anime music quiz played on live instruments — <b>con meetups</b>, and <b>busking sessions</b> around the Bay. Those are events, listed here when they're scheduled.</p>
+    </div>
+  </section>
+
+  <!-- WHAT IS + VIDEO -->
+  <section class="block alt">
+    <div class="wrap two">
+      <div class="prose">
+        <div class="sec-head"><h2>What is live anime music?</h2></div>
+        <p>It's the music of anime, Japanese games, and J-Pop/J-Rock — <b>anisong, theme songs, and soundtracks</b> — played live by real bands: rock bands, jazz and fusion combos, pianists, and chamber players, instead of a DJ track or a recording.</p>
+        <p>At a BAAM show that can mean a full band concert, an <b>open jam</b> where anyone in the audience can sit in, <b>live band karaoke</b>, or <b>dueling pianos</b> taking requests. You don't need to know the series to enjoy it — if you like live music, you already get it.</p>
+        <p>Concerts and events for this music are few and far between outside of conventions — which is exactly why BAAM puts on its own.</p>
+      </div>
+      <div class="video-box">
+        <span class="type" style="align-self:flex-start">Featured video</span>
+        <h3>The MAGWest Guided Jam Session</h3>
+        <p>Watch BAAM's jam session at MAGWest 2025 — musicians of every level playing Japanese music together. Full-length video on the MAGFest YouTube channel (BAAM's video lives on other channels, not its own).</p>
+        <a class="btn" href="https://www.youtube.com/watch?v=dbiYqEPXr-E" target="_blank" rel="noopener">Watch on YouTube →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT BANDS STRIP -->
+  <section class="block" style="padding:40px 0 8px">
+    <div class="wrap">
+      <div class="sec-head"><h2>Recently at BAAM</h2><span class="count">Bands</span></div>
+      <div class="logostrip">
+        <span class="pill">Merry Go Station</span><span class="pill">Guy Jeans</span><span class="pill">Velvet Turtles</span><span class="pill">Food Coma</span><span class="pill">Petty Tactic</span><span class="pill">Aimai Mirai</span>
+      </div>
+      <p style="margin-top:14px"><a href="#bands" style="font-weight:700">Full bands &amp; musicians directory ↓</a></p>
+    </div>
+  </section>
+
+  <!-- PARTNERS STRIP -->
+  <section class="block" style="padding:22px 0 44px">
+    <div class="wrap">
+      <div class="sec-head"><h2>Partners</h2></div>
+      <div class="logostrip">
+        <span class="pill">AniCLover</span><span class="pill">GG Orchestra</span>
+      </div>
+      <p style="margin-top:14px"><a href="#about" style="font-weight:700">About our partners &amp; venues ↓</a></p>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="block alt" id="community">
+    <div class="wrap">
+      <div class="sec-head"><h2>Community</h2><span class="count">Discord is home</span></div>
+      <p class="sec-sub">BAAM started as a way for anime bands and musicians to form a network — and the network lives in the Discord server. Instagram (@bayareaanimemusic) is where shows are announced; the server is where the community actually happens.</p>
+      <div class="two">
+        <div class="prose">
+          <p><b>Bands form here.</b> Many anime bands have formed inside the server — musicians from beginner to professional, playing anime music and genres well beyond it. If you're looking for a band, a collaborator, or a fill-in, this is where to start.</p>
+          <p><b>Planning happens here.</b> Events, jam sessions, and collaborations are planned with the community, and members share photos and clips from shows.</p>
+          <p><b>Playing happens here, too.</b> Members host informal jams at their houses and venues around the Bay, and chamber music sessions among members — when one grows a date, a venue, and an audience, it becomes a listed event above.</p>
+        </div>
+        <div class="prose">
+          <p><b>The lead sheet library.</b> The server holds a library of hundreds of lead sheets, contributed by members — some from the group behind VGLS — shared with members through the server. It's how a jam with strangers can still play the song: the charts are there.</p>
+          <p><b>Who it's for.</b> Musicians, bands, fans, cosplayers, and photographers — you don't have to perform, and you don't have to be in a band. If you love anime and Japanese music in the Bay Area, you belong here.</p>
+          <p style="margin-top:18px"><a class="btn red" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDS -->
+  <section class="block" id="bands">
+    <div class="wrap">
+      <div class="sec-head"><h2>Bands &amp; Musicians</h2><span class="count">From BAAM event lineups</span></div>
+      <p class="sec-sub">Groups who have played BAAM events, most recent first — built from event lineups, so every credit below is a show that actually happened. Follow them on Instagram for their music; for anything else, you're in the right place — you're already on BAAM's site.</p>
+      <div class="band-grid">
+        <div class="band"><h3>Merry Go Station</h3><p class="genre">J-Rock · Anime · VGM covers</p><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/merrygostation.band/" target="_blank" rel="noopener">@merrygostation.band</a></div>
+        <div class="band"><h3>Guy Jeans</h3><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/guy_jeans_official/" target="_blank" rel="noopener">@guy_jeans_official</a></div>
+        <div class="band"><h3>Velvet Turtles</h3><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/velvetturtlesband/" target="_blank" rel="noopener">@velvetturtlesband</a></div>
+        <div class="band"><h3>Food Coma</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · RocKosplay 2025</p><a class="ig" href="https://www.instagram.com/foodcoma_band/" target="_blank" rel="noopener">@foodcoma_band</a></div>
+        <div class="band"><h3>Petty Tactic</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · J-Block Party — Sep 12, 2026</p><a class="ig" href="https://www.instagram.com/pettytacticband/" target="_blank" rel="noopener">@pettytacticband</a></div>
+        <div class="band"><h3>Aimai Mirai</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · J-Block Party — Sep 12, 2026 · RocKosplay 2024</p><a class="ig" href="https://www.instagram.com/aimai_mirai/" target="_blank" rel="noopener">@aimai_mirai</a></div>
+        <div class="band"><h3>Press Start</h3><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
+        <div class="band"><h3>Interstellar Soundscapes</h3><p class="genre">Jazz · Fusion</p><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
+        <div class="band"><h3>Studio Phoebe</h3><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
+        <div class="band"><h3>Half Past Midnight</h3><p class="played">Played: J-Block Party — Sep 12, 2026</p></div>
+        <div class="band"><h3>Kill the Protagonist</h3><p class="played">Played: RocKosplay 2025 · RocKosplay 2024</p></div>
+        <div class="band"><h3>Project Idol</h3><p class="played">Played: RocKosplay 2025</p></div>
+        <div class="band"><h3>Otaku Ongaku</h3><p class="played">Played: RocKosplay 2025</p></div>
+        <div class="band"><h3>Still Deer</h3><p class="played">Played: RocKosplay 2024</p></div>
+        <div class="band"><h3>Medium Spicy</h3><p class="played">Played: RocKosplay 2024</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED -->
+  <section class="block alt" id="get-involved">
+    <div class="wrap">
+      <div class="sec-head"><h2>Get Involved</h2><span class="count">Volunteer-run</span></div>
+      <p class="sec-sub">BAAM is volunteer-run and community-based — the organizing, promotion, and day-of work behind every show is volunteer labor. There are four ways in:</p>
+      <div class="gi-grid">
+        <div class="gi"><h3>Play a BAAM show</h3><p>Bands and musicians in the network play BAAM concerts and events. Join the Discord, come to a jam, and get to know the community — that's how lineups come together.</p></div>
+        <div class="gi"><h3>Volunteer your time</h3><p>Help run the shows: event-day help, promotion and flyering, and hosting jam sessions and chamber sessions. One show or ongoing — both matter.</p></div>
+        <div class="gi"><h3>Contribute</h3><p>Lead sheets for the library, photography and video at shows, design, gear and backline, or a space to play in — in-kind contributions keep events possible.</p></div>
+        <div class="gi"><h3>Support BAAM</h3><p>Come to shows, share photos and clips, and donate to support the mission. BAAM is a community nonprofit, and typically takes no cut from musicians except to cover venue and event expense costs.</p></div>
+      </div>
+      <p style="margin-top:22px" class="prose">The way to start any of these is the same: <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener"><b>join the Discord</b></a> and say hello.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="sec-head"><h2>About BAAM</h2></div>
+      <div class="two">
+        <div class="prose">
+          <p>Bay Area Anime Music celebrates and shares Japanese anime music culture through live concerts and community events, building a network of local musicians.</p>
+          <p>The BAAM group started as a way for anime bands and musicians to form a network. Concerts and events are few and far between for anime fans outside of the occasional con, so it's difficult for anime musicians to build up credibility or find venues to perform at. BAAM works to resolve that by setting up its own events and concerts to help build a strong community of anime music fans, and helping connect musicians together for collaboration.</p>
+          <p>Our musicians tend to focus on live instrumental music playing J-Rock and J-Pop — but who knows what the future holds?</p>
+          <p>BAAM is a California nonprofit public benefit corporation based in the Bay Area, incorporated July 21, 2025.</p>
+        </div>
+        <div class="prose">
+          <p><b>What BAAM does</b></p>
+          <p>Ticketed and community concerts · open jam sessions · live band karaoke · dueling pianos · con panels, meetups, and busking · a Discord community where bands form and a member-built lead sheet library lives.</p>
+          <p style="margin-top:14px"><b>Find BAAM</b></p>
+          <p>Instagram is the fastest way to follow show announcements: <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">@bayareaanimemusic</a>. The community itself is on <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a>.</p>
+        </div>
+      </div>
+
+      <h3 style="font-size:22px;font-weight:800;margin-top:38px">Partners</h3>
+      <div class="deflist">
+        <div class="def"><h3>AniCLover</h3><p>Bay Area anikura / DJ nonprofit for anime, Vocaloid, and otaku music. BAAM and AniCLover co-presented J-Block Party at DNA Lounge — their first live band event together. <a href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">aniclover.com</a></p></div>
+        <div class="def"><h3>GG Orchestra</h3><p>A separate Bay Area game, anime, and film orchestral ensemble — a partner organization with overlapping members. For orchestral concerts and auditions, see <a href="https://ggorchestra.org/" target="_blank" rel="noopener">ggorchestra.org</a>.</p></div>
+      </div>
+
+      <h3 style="font-size:22px;font-weight:800;margin-top:30px">Venues we've played</h3>
+      <div class="logostrip" style="margin-top:14px">
+        <span class="pill">Quarter Note Bar &amp; Grill</span>
+        <span class="pill">Tamper Room — Fremont</span>
+        <span class="pill">Newark Pavilion — Newark</span>
+        <span class="pill">DNA Lounge — San Francisco</span>
+        <span class="pill">DoubleTree by Hilton — San Jose (MAGWest)</span>
+        <span class="pill">Santa Clara (RocKosplay 2024)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING — separate, minimal -->
+  <section class="booking" id="booking">
+    <div class="wrap">
+      <div class="sec-head"><h2>Booking</h2></div>
+      <p class="sec-sub" style="font-size:17px;max-width:760px">Booking inquiries for BAAM musicians go through Bay Area Anime Music — contact BAAM, not the bands directly. For venues, festivals, conventions, and events, send an inquiry below and BAAM will coordinate.</p>
+      <p style="color:var(--booking-muted);font-size:15px;margin-bottom:26px">Past projects: MAGWest Jam · Tokyo Arcade · RocKosplay · Fall J-Rock Fest · J-Block Party</p>
+
+      <form class="book" id="booking-form" novalidate>
+        <div><label for="b-name">Name / Organization</label><input id="b-name" name="name" type="text" autocomplete="name"></div>
+        <div><label for="b-email">Email</label><input id="b-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="b-date">Event date</label><input id="b-date" name="date" type="date"></div>
+        <div><label for="b-venue">Venue / City</label><input id="b-venue" name="venue" type="text"></div>
+        <div class="full"><label for="b-notes">Message</label><textarea id="b-notes" name="message" rows="4"></textarea></div>
+        <div class="full form-msg" id="form-msg">Thanks — this is the static site template, so the form isn't connected yet. When this page is deployed, connect this form to BAAM's email or form service so inquiries reach BAAM directly.</div>
+        <div class="full">
+          <button class="btn red" type="submit">Send booking inquiry to BAAM</button>
+          <p class="note" style="margin-top:10px">This form lives only on this Booking page. On deployment, connect it to BAAM's email / form service — it does not send anywhere in this static template.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="max-width:340px">
+        <h3>Bay Area Anime Music</h3>
+        <p style="margin-top:8px">Bay Area nonprofit network of anime musicians &amp; live Japanese music scene.</p>
+        <p style="margin-top:8px">California nonprofit public benefit corporation.</p>
+      </div>
+      <div class="foot-links">
+        <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Site</b>
+        <a href="#events">Events</a><a href="#community">Community</a><a href="#bands">Bands &amp; Musicians</a><a href="#get-involved">Get Involved</a><a href="#about">About</a><a href="#booking">Booking</a>
+      </div>
+      <div class="foot-links">
+        <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Follow &amp; join</b>
+        <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram — @bayareaanimemusic</a>
+        <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord — join the server</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+        <a href="https://www.threads.net/@bayareaanimemusic" target="_blank" rel="noopener">Threads — @bayareaanimemusic</a>
+      </div>
+      <div class="foot-links">
+        <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Contact</b>
+        <p>General questions: join the <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a> or message <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">@bayareaanimemusic</a>.<br>Email: <i>[BAAM contact email — add on deployment]</i></p>
+        <p>Booking? Use the <a href="#booking">Booking page</a> — it's the only booking contact.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Bay Area Anime Music · Community nonprofit</span>
+      <span>Live anime, J-Rock, J-Pop &amp; VGM — played live in the Bay Area</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.filters button');
+  function apply(filter){
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-filter')===filter ? 'true':'false'); });
+    [['#upcoming-grid','#upcoming-empty'],['#past-grid','#past-empty']].forEach(function(pair){
+      var grid = document.querySelector(pair[0]); if(!grid) return;
+      var visible = 0;
+      grid.querySelectorAll('.card').forEach(function(card){
+        var show = filter==='all' || (card.getAttribute('data-type')||'').split(' ').indexOf(filter) !== -1;
+        card.classList.toggle('hidden-card', !show);
+        if(show) visible++;
+      });
+      var empty = document.querySelector(pair[1]);
+      if(empty) empty.classList.toggle('show', visible===0);
+    });
+  }
+  buttons.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-filter')); }); });
+
+  var form = document.getElementById('booking-form');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('form-msg').classList.add('show');
+    });
+  }
+})();
+</script>
+</body>
+</html>
