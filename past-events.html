@@ -108,6 +108,27 @@ section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-
 .price{font-weight:800;font-size:15px}
 .card a.more{font-weight:700;font-size:14.5px}
 .hidden-card{display:none}
+.series{grid-column:1/-1;background:var(--surface2);border:1.5px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:14px}
+.series.hidden-card{display:none}
+.series-toggle{display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;cursor:pointer;text-align:left;width:100%;color:var(--ink)}
+.series-toggle .series-title{font-size:19px;font-weight:800}
+.series-toggle .series-count{font-size:14px;color:var(--muted)}
+.series-toggle .series-arrow{margin-left:auto;font-size:18px;line-height:1;transition:transform .2s}
+.series[aria-expanded="true"] .series-arrow{transform:rotate(90deg)}
+.series-sub{font-size:14.5px;color:var(--muted);margin:0}
+.series-thumbs{display:flex;gap:14px;flex-wrap:wrap}
+.thumb{display:flex;flex-direction:column;gap:6px;background:none;border:0;padding:0;cursor:pointer;text-align:left;width:96px;color:var(--ink)}
+.thumb img{display:block;width:96px;aspect-ratio:4/5;object-fit:cover;border-radius:8px}
+.thumb.is-active img{outline:2.5px solid var(--red);outline-offset:2px}
+.thumb span{font-size:13px;font-weight:700;line-height:1.3}
+.thumb span small{font-weight:600;color:var(--muted)}
+.series-stage{display:flex;align-items:stretch;gap:10px}
+.series-stage[hidden]{display:none}
+.stage-cards{flex:1;min-width:0}
+.stage-cards .card{display:none}
+.stage-cards .card.is-active{display:flex}
+.stage-nav{flex:0 0 auto;align-self:center;background:var(--chip);border:1.5px solid var(--line);border-radius:50%;width:40px;height:40px;font-size:22px;line-height:1;cursor:pointer;color:var(--ink)}
+.stage-nav:hover{background:var(--surface)}
 .empty-note{display:none;background:var(--surface);border:1.5px dashed var(--line);border-radius:var(--radius);padding:18px;color:var(--ink2);font-size:15px}
 .empty-note.show{display:block}
 
@@ -294,6 +315,21 @@ footer.site a:hover{color:var(--red)}
             <a class="more" href="halloweeb.html">Event details →</a>
           </div>
         </article>
+<section class="series" data-series="jrock-fests-tamper-room" aria-expanded="false">
+          <button class="series-toggle" type="button" aria-expanded="false">
+            <span class="series-title">J-Rock Fests — Tamper Room</span>
+            <span class="series-count">3 events</span>
+            <span class="series-arrow" aria-hidden="true">&#9656;</span>
+          </button>
+          <p class="series-sub">Three J-Rock concerts at the Tamper Room, Fremont.</p>
+          <div class="series-thumbs">
+            <button class="thumb is-active" type="button" data-index="0" aria-label="Show Fall J-Rock Fest"><img src="flyers/fall-j-rock-fest-2026-10-03.webp" alt="Fall J-Rock Fest flyer"><span>Fall J-Rock Fest<br><small>Oct 3, 2026</small></span></button>
+            <button class="thumb" type="button" data-index="1" aria-label="Show Spring J-Rock Fest"><img src="flyers/spring-j-rock-fest-2026-05-09.webp" alt="Spring J-Rock Fest flyer"><span>Spring J-Rock Fest<br><small>May 9, 2026</small></span></button>
+            <button class="thumb" type="button" data-index="2" aria-label="Show Winter J-Rock Fest"><img src="flyers/winter-j-rock-fest-2026-01-24.webp" alt="Winter J-Rock Fest flyer"><span>Winter J-Rock Fest<br><small>Jan 24, 2026</small></span></button>
+          </div>
+          <div class="series-stage" hidden>
+            <button class="stage-nav stage-prev" type="button" aria-label="Previous event">&#8249;</button>
+            <div class="stage-cards">
 <article class="card" id="fall-j-rock-fest" data-type="concert">
           <a class="flyer-link" href="flyers/fall-j-rock-fest-2026-10-03.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/fall-j-rock-fest-2026-10-03.webp" alt="Fall J-Rock Fest flyer"></a>
           <div class="top"><div class="datebox"><b>3</b><span>Oct 2026</span></div><span class="type concert">Concert</span></div>
@@ -302,71 +338,6 @@ footer.site a:hover{color:var(--red)}
           <p class="detail">A three-band J-Rock bill, with professional photography by @jiashaneva.</p>
           <p class="lineup"><b>Lineup:</b> Food Coma · Petty Tactic · Aimai Mirai</p>
           <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Photos on Instagram →</a></div>
-        </article>
-<article class="card" id="tokyo-arcade" data-type="concert">
-          <a class="flyer-link" href="flyers/tokyo-arcade-2026-09-26.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/tokyo-arcade-2026-09-26.webp" alt="Tokyo Arcade flyer"></a>
-          <div class="top"><div class="datebox"><b>26</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
-          <h3>Tokyo Arcade</h3>
-          <p class="venue">Quarter Note Bar &amp; Grill</p>
-          <p class="detail">An evening of VGM, anime, and Japanese jazz &amp; fusion.</p>
-          <p class="lineup"><b>Lineup:</b> Press Start · Interstellar Soundscapes · Studio Phoebe</p>
-          <div class="foot"><a class="more" href="https://www.eventbrite.com/e/tokyo-arcade-tickets-2001708576236" target="_blank" rel="noopener">Event listing →</a></div>
-        </article>
-<article class="card" id="j-block-party" data-type="concert">
-          <a class="flyer-link" href="flyers/j-block-party-2026-09-12.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/j-block-party-2026-09-12.webp" alt="J-Block Party flyer"></a>
-          <div class="top"><div class="datebox"><b>12</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
-          <h3>J-Block Party</h3>
-          <p class="venue">DNA Lounge (Above) · San Francisco</p>
-          <p class="detail">BAAM and AniClover's first live band event together — three Bay Area anisong bands in one night.</p>
-          <p class="lineup"><b>Lineup:</b> Aimai Mirai · Petty Tactic · Half Past Midnight</p>
-          <div class="foot"><span class="price">$20 / $24 / $32</span><a class="more" href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">Event page →</a></div>
-        </article>
-<article class="card" id="classical-chamber-jam" data-type="jam">
-          <a class="flyer-link" href="flyers/classical-chamber-jam-2026-08-22.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/classical-chamber-jam-2026-08-22.webp" alt="Classical Chamber Jam flyer"></a>
-          <div class="top"><div class="datebox"><b>22</b><span>Aug 2026</span></div><span class="type">Jam Session</span></div>
-          <h3>Classical Chamber Jam</h3>
-          <p class="venue">Sports Basement Sunnyvale (Community Room)</p>
-          <p class="detail">A small meetup for anyone interested in a classical chamber group — an acoustic open jam, Saturday 1–3 PM. Bring your own instruments.</p>
-          <div class="foot"><a class="more" href="https://www.instagram.com/p/DcUdkEBPAee/" target="_blank" rel="noopener">Instagram post →</a></div>
-        </article>
-<article class="card" id="magwest-jam-2026" data-type="jam festival karaoke">
-          <a class="flyer-link" href="flyers/magwest-jam-2026.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/magwest-jam-2026.webp" alt="MAGWest Jam 2026 flyer"></a>
-          <div class="top"><div class="datebox"><b>15</b><span>Aug 2026</span></div><span class="type">Jam Session</span></div>
-          <h3>MAGWest Jam 2026</h3>
-          <p class="venue">MAGWest 2026</p>
-          <p class="detail">BAAM co-directed the Guided Anime Jam — Saturday 5:30–7:30 PM, all levels welcome.</p>
-        </article>
-<article class="card" id="dueling-pianos-magwest" data-type="pianos festival">
-          <a class="flyer-link" href="flyers/dueling-pianos-magwest-2026-08-15.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/dueling-pianos-magwest-2026-08-15.webp" alt="Dueling Pianos at MAGWest flyer"></a>
-          <div class="top"><div class="datebox"><b>15</b><span>Aug 2026</span></div><span class="type">Dueling Pianos</span></div>
-          <h3>Dueling Pianos @ MAGWest</h3>
-          <p class="venue">MAGWest 2026</p>
-          <p class="detail">Two pianos, song requests, anime and game music. Saturday, August 15, 2026, Steakhouse Stage.</p>
-          <p class="lineup"><b>Pianists:</b> eLEDiem Piano · Quintec Music · raidsrc</p>
-        </article>
-<article class="card" id="acoustic-jam-redwood-city" data-type="jam">
-          <a class="flyer-link" href="flyers/acoustic-jam-2026-08-08.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/acoustic-jam-2026-08-08.webp" alt="Acoustic Jam Session flyer"></a>
-          <div class="top"><div class="datebox"><b>8</b><span>Aug 2026</span></div><span class="type">Jam Session</span></div>
-          <h3>Acoustic/Casual Jam Session</h3>
-          <p class="venue">Sports Basement Redwood City</p>
-          <p class="detail">A casual acoustic jam session — Saturday 3–5 PM. Bring your instruments!</p>
-          <div class="foot"><a class="more" href="https://www.instagram.com/p/DbrSoG9vOxj/" target="_blank" rel="noopener">Instagram post →</a></div>
-        </article>
-<article class="card" id="dueling-pianos-fanime" data-type="pianos">
-          <a class="flyer-link" href="flyers/dueling-pianos-fanime-2026-05-23.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/dueling-pianos-fanime-2026-05-23.webp" alt="Dueling Pianos at Fanime flyer"></a>
-          <div class="top"><div class="datebox"><b>23</b><span>May 2026</span></div><span class="type">Dueling Pianos</span></div>
-          <h3>Dueling Pianos @ Fanime</h3>
-          <p class="venue">FanimeCon 2026</p>
-          <p class="detail">Two pianos, song requests, anime and game music. Saturday 7–8 PM, Room 231 (second floor).</p>
-          <p class="lineup"><b>Pianists:</b> eLEDiem Piano · Quintec Music · raidsrc · tsukinara</p>
-        </article>
-<article class="card" id="anisong-jamboree-live" data-type="jam festival">
-          <a class="flyer-link" href="flyers/anisong-jamboree-live-2026-05-23.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/anisong-jamboree-live-2026-05-23.webp" alt="Anisong Jamboree Live! flyer"></a>
-          <div class="top"><div class="datebox"><b>23</b><span>May 2026</span></div><span class="type">Jam Session</span></div>
-          <h3>Anisong Jamboree Live!</h3>
-          <p class="venue">FanimeCon 2026</p>
-          <p class="detail">FanimeCon's new anisong jam — BAAM provided the lead sheets, piano, guitar, mini drum kit, and amps. Performance block 2–4 PM, open jam 4–5 PM, Room 230 AB.</p>
-          <div class="foot"><a class="more" href="https://www.instagram.com/p/DYigxhCGT3Y/" target="_blank" rel="noopener">Instagram post →</a></div>
         </article>
 <article class="card" id="spring-j-rock-fest" data-type="concert">
           <a class="flyer-link" href="flyers/spring-j-rock-fest-2026-05-09.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/spring-j-rock-fest-2026-05-09.webp" alt="Spring J-Rock Fest flyer"></a>
@@ -386,12 +357,83 @@ footer.site a:hover{color:var(--red)}
           <p class="lineup"><b>Lineup:</b> Half Past Midnight (7 PM) · bluefilm (8 PM) · Petty Tactic (9 PM) · Aimai Mirai (10 PM)</p>
           <div class="foot"><span class="price">$10 / $15 presale</span></div>
         </article>
-<article class="card" id="yumecon-anime-music-game-show" data-type="festival">
-          <a class="flyer-link" href="flyers/yumecon-anime-music-game-show-2025-11-15.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/yumecon-anime-music-game-show-2025-11-15.webp" alt="Anime Music Game Show at YumeCon flyer"></a>
-          <div class="top"><div class="datebox"><b>15</b><span>Nov 2025</span></div><span class="type">Panel</span></div>
-          <h3>Anime Music Game Show — YumeCon</h3>
-          <p class="venue">YumeConUSA 2025</p>
-          <p class="detail">An audience-participation anime music game show. Saturday 2:45–3:45 PM, Panel Room 2, DoubleTree by Hilton, San Jose.</p>
+            </div>
+            <button class="stage-nav stage-next" type="button" aria-label="Next event">&#8250;</button>
+          </div>
+        </section>
+<article class="card" id="tokyo-arcade" data-type="concert">
+          <a class="flyer-link" href="flyers/tokyo-arcade-2026-09-26.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/tokyo-arcade-2026-09-26.webp" alt="Tokyo Arcade flyer"></a>
+          <div class="top"><div class="datebox"><b>26</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
+          <h3>Tokyo Arcade</h3>
+          <p class="venue">Quarter Note Bar &amp; Grill</p>
+          <p class="detail">An evening of VGM, anime, and Japanese jazz &amp; fusion.</p>
+          <p class="lineup"><b>Lineup:</b> Press Start · Interstellar Soundscapes · Studio Phoebe</p>
+          <div class="foot"><a class="more" href="https://www.eventbrite.com/e/tokyo-arcade-tickets-2001708576236" target="_blank" rel="noopener">Event listing →</a></div>
+        </article>
+<article class="card" id="j-block-party" data-type="concert">
+          <a class="flyer-link" href="flyers/j-block-party-2026-09-12.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/j-block-party-2026-09-12.webp" alt="J-Block Party flyer"></a>
+          <div class="top"><div class="datebox"><b>12</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
+          <h3>J-Block Party</h3>
+          <p class="venue">DNA Lounge (Above) · San Francisco</p>
+          <p class="detail">BAAM and AniClover's first live band event together — three Bay Area anisong bands in one night.</p>
+          <p class="lineup"><b>Lineup:</b> Aimai Mirai · Petty Tactic · Half Past Midnight</p>
+          <div class="foot"><span class="price">$20 / $24 / $32</span><a class="more" href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">Event page →</a></div>
+        </article>
+<section class="series" data-series="sports-basement-jams" aria-expanded="false">
+          <button class="series-toggle" type="button" aria-expanded="false">
+            <span class="series-title">Sports Basement Jams</span>
+            <span class="series-count">2 events</span>
+            <span class="series-arrow" aria-hidden="true">&#9656;</span>
+          </button>
+          <p class="series-sub">Two jam sessions at Sports Basement.</p>
+          <div class="series-thumbs">
+            <button class="thumb is-active" type="button" data-index="0" aria-label="Show Classical Chamber Jam"><img src="flyers/classical-chamber-jam-2026-08-22.webp" alt="Classical Chamber Jam flyer"><span>Classical Chamber Jam<br><small>Aug 22, 2026</small></span></button>
+            <button class="thumb" type="button" data-index="1" aria-label="Show Acoustic/Casual Jam Session"><img src="flyers/acoustic-jam-2026-08-08.webp" alt="Acoustic Jam Session flyer"><span>Acoustic/Casual Jam Session<br><small>Aug 8, 2026</small></span></button>
+          </div>
+          <div class="series-stage" hidden>
+            <button class="stage-nav stage-prev" type="button" aria-label="Previous event">&#8249;</button>
+            <div class="stage-cards">
+<article class="card" id="classical-chamber-jam" data-type="jam">
+          <a class="flyer-link" href="flyers/classical-chamber-jam-2026-08-22.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/classical-chamber-jam-2026-08-22.webp" alt="Classical Chamber Jam flyer"></a>
+          <div class="top"><div class="datebox"><b>22</b><span>Aug 2026</span></div><span class="type">Jam Session</span></div>
+          <h3>Classical Chamber Jam</h3>
+          <p class="venue">Sports Basement Sunnyvale (Community Room)</p>
+          <p class="detail">A small meetup for anyone interested in a classical chamber group — an acoustic open jam, Saturday 1–3 PM. Bring your own instruments.</p>
+          <div class="foot"><a class="more" href="https://www.instagram.com/p/DcUdkEBPAee/" target="_blank" rel="noopener">Instagram post →</a></div>
+        </article>
+<article class="card" id="acoustic-jam-redwood-city" data-type="jam">
+          <a class="flyer-link" href="flyers/acoustic-jam-2026-08-08.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/acoustic-jam-2026-08-08.webp" alt="Acoustic Jam Session flyer"></a>
+          <div class="top"><div class="datebox"><b>8</b><span>Aug 2026</span></div><span class="type">Jam Session</span></div>
+          <h3>Acoustic/Casual Jam Session</h3>
+          <p class="venue">Sports Basement Redwood City</p>
+          <p class="detail">A casual acoustic jam session — Saturday 3–5 PM. Bring your instruments!</p>
+          <div class="foot"><a class="more" href="https://www.instagram.com/p/DbrSoG9vOxj/" target="_blank" rel="noopener">Instagram post →</a></div>
+        </article>
+            </div>
+            <button class="stage-nav stage-next" type="button" aria-label="Next event">&#8250;</button>
+          </div>
+        </section>
+<section class="series" data-series="magwest-jams" aria-expanded="false">
+          <button class="series-toggle" type="button" aria-expanded="false">
+            <span class="series-title">MAGWest Jams</span>
+            <span class="series-count">3 events</span>
+            <span class="series-arrow" aria-hidden="true">&#9656;</span>
+          </button>
+          <p class="series-sub">Three annual jam sessions at MAGWest.</p>
+          <div class="series-thumbs">
+            <button class="thumb is-active" type="button" data-index="0" aria-label="Show MAGWest Jam 2026"><img src="flyers/magwest-jam-2026.webp" alt="MAGWest Jam 2026 flyer"><span>MAGWest Jam 2026<br><small>Aug 15, 2026</small></span></button>
+            <button class="thumb" type="button" data-index="1" aria-label="Show MAGWest Jam 2025"><img src="flyers/magwest-jam-2025.webp" alt="MAGWest Jam 2025 flyer"><span>MAGWest Jam 2025<br><small>Aug 8, 2025</small></span></button>
+            <button class="thumb" type="button" data-index="2" aria-label="Show MAGWest Jam 2024"><img src="flyers/magwest-jam-2024.webp" alt="MAGWest Jam 2024 flyer"><span>MAGWest Jam 2024<br><small>Sep 27, 2024</small></span></button>
+          </div>
+          <div class="series-stage" hidden>
+            <button class="stage-nav stage-prev" type="button" aria-label="Previous event">&#8249;</button>
+            <div class="stage-cards">
+<article class="card" id="magwest-jam-2026" data-type="jam festival karaoke">
+          <a class="flyer-link" href="flyers/magwest-jam-2026.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/magwest-jam-2026.webp" alt="MAGWest Jam 2026 flyer"></a>
+          <div class="top"><div class="datebox"><b>15</b><span>Aug 2026</span></div><span class="type">Jam Session</span></div>
+          <h3>MAGWest Jam 2026</h3>
+          <p class="venue">MAGWest 2026</p>
+          <p class="detail">BAAM co-directed the Guided Anime Jam — Saturday 5:30–7:30 PM, all levels welcome.</p>
         </article>
 <article class="card" id="magwest-jam-2025" data-type="jam festival karaoke">
           <a class="flyer-link" href="flyers/magwest-jam-2025.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/magwest-jam-2025.webp" alt="MAGWest Jam 2025 flyer"></a>
@@ -400,6 +442,49 @@ footer.site a:hover{color:var(--red)}
           <p class="venue">MAGWest 2025</p>
           <p class="detail">BAAM presented the Guided Jam Session at the MAGWest Jamspace — Friday 9–11 PM, all levels welcome. MAGWest badge required.</p>
           <div class="foot"><a class="more" href="https://www.youtube.com/watch?v=dbiYqEPXr-E" target="_blank" rel="noopener">Watch the 2025 jam →</a></div>
+        </article>
+<article class="card" id="magwest-jam-2024" data-type="jam festival karaoke">
+          <a class="flyer-link" href="flyers/magwest-jam-2024.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/magwest-jam-2024.webp" alt="MAGWest Jam 2024 flyer"></a>
+          <div class="top"><div class="datebox"><b>27</b><span>Sep 2024</span></div><span class="type">Jam Session</span></div>
+          <h3>MAGWest Jam 2024</h3>
+          <p class="venue">MAGWest 2024</p>
+          <p class="detail">BAAM sponsored the Japanese Music Open Jam/Karaoke, Friday 9 PM.</p>
+          <div class="foot"><a class="more" href="https://www.youtube.com/watch?v=qCUtaJKr_hg" target="_blank" rel="noopener">2024 jam →</a></div>
+        </article>
+            </div>
+            <button class="stage-nav stage-next" type="button" aria-label="Next event">&#8250;</button>
+          </div>
+        </section>
+<article class="card" id="dueling-pianos-magwest" data-type="pianos festival">
+          <a class="flyer-link" href="flyers/dueling-pianos-magwest-2026-08-15.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/dueling-pianos-magwest-2026-08-15.webp" alt="Dueling Pianos at MAGWest flyer"></a>
+          <div class="top"><div class="datebox"><b>15</b><span>Aug 2026</span></div><span class="type">Dueling Pianos</span></div>
+          <h3>Dueling Pianos @ MAGWest</h3>
+          <p class="venue">MAGWest 2026</p>
+          <p class="detail">Two pianos, song requests, anime and game music. Saturday, August 15, 2026, Steakhouse Stage.</p>
+          <p class="lineup"><b>Pianists:</b> eLEDiem Piano · Quintec Music · raidsrc</p>
+        </article>
+<article class="card" id="dueling-pianos-fanime" data-type="pianos">
+          <a class="flyer-link" href="flyers/dueling-pianos-fanime-2026-05-23.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/dueling-pianos-fanime-2026-05-23.webp" alt="Dueling Pianos at Fanime flyer"></a>
+          <div class="top"><div class="datebox"><b>23</b><span>May 2026</span></div><span class="type">Dueling Pianos</span></div>
+          <h3>Dueling Pianos @ Fanime</h3>
+          <p class="venue">FanimeCon 2026</p>
+          <p class="detail">Two pianos, song requests, anime and game music. Saturday 7–8 PM, Room 231 (second floor).</p>
+          <p class="lineup"><b>Pianists:</b> eLEDiem Piano · Quintec Music · raidsrc · tsukinara</p>
+        </article>
+<article class="card" id="anisong-jamboree-live" data-type="jam festival">
+          <a class="flyer-link" href="flyers/anisong-jamboree-live-2026-05-23.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/anisong-jamboree-live-2026-05-23.webp" alt="Anisong Jamboree Live! flyer"></a>
+          <div class="top"><div class="datebox"><b>23</b><span>May 2026</span></div><span class="type">Jam Session</span></div>
+          <h3>Anisong Jamboree Live!</h3>
+          <p class="venue">FanimeCon 2026</p>
+          <p class="detail">FanimeCon's new anisong jam — BAAM provided the lead sheets, piano, guitar, mini drum kit, and amps. Performance block 2–4 PM, open jam 4–5 PM, Room 230 AB.</p>
+          <div class="foot"><a class="more" href="https://www.instagram.com/p/DYigxhCGT3Y/" target="_blank" rel="noopener">Instagram post →</a></div>
+        </article>
+<article class="card" id="yumecon-anime-music-game-show" data-type="festival">
+          <a class="flyer-link" href="flyers/yumecon-anime-music-game-show-2025-11-15.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/yumecon-anime-music-game-show-2025-11-15.webp" alt="Anime Music Game Show at YumeCon flyer"></a>
+          <div class="top"><div class="datebox"><b>15</b><span>Nov 2025</span></div><span class="type">Panel</span></div>
+          <h3>Anime Music Game Show — YumeCon</h3>
+          <p class="venue">YumeConUSA 2025</p>
+          <p class="detail">An audience-participation anime music game show. Saturday 2:45–3:45 PM, Panel Room 2, DoubleTree by Hilton, San Jose.</p>
         </article>
 <article class="card" id="rockosplay-2025" data-type="concert">
           <a class="flyer-link" href="flyers/rockosplay-2025-07-19.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/rockosplay-2025-07-19.webp" alt="RocKosplay 2025 flyer"></a>
@@ -425,14 +510,6 @@ footer.site a:hover{color:var(--red)}
           <p class="venue">Baylands Park Grove, Sunnyvale</p>
           <p class="detail">Archived in the @bayareaanimemusic Instagram Highlights.</p>
           <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">See the Instagram Highlight →</a></div>
-        </article>
-<article class="card" id="magwest-jam-2024" data-type="jam festival karaoke">
-          <a class="flyer-link" href="flyers/magwest-jam-2024.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/magwest-jam-2024.webp" alt="MAGWest Jam 2024 flyer"></a>
-          <div class="top"><div class="datebox"><b>27</b><span>Sep 2024</span></div><span class="type">Jam Session</span></div>
-          <h3>MAGWest Jam 2024</h3>
-          <p class="venue">MAGWest 2024</p>
-          <p class="detail">BAAM sponsored the Japanese Music Open Jam/Karaoke, Friday 9 PM.</p>
-          <div class="foot"><a class="more" href="https://www.youtube.com/watch?v=qCUtaJKr_hg" target="_blank" rel="noopener">2024 jam →</a></div>
         </article>
 <article class="card" id="rockaraoke" data-type="concert karaoke">
           <a class="flyer-link" href="flyers/rockaraoke-2024-08-10-night.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/rockaraoke-2024-08-10-night.webp" alt="RocKaraoke flyer"></a>
@@ -490,8 +567,7 @@ footer.site a:hover{color:var(--red)}
   </div>
 </footer>
 
-<script>
-(function(){
+<script>(function(){
   var buttons = document.querySelectorAll('.filters button');
   function apply(filter){
     buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-filter')===filter ? 'true':'false'); });
@@ -505,10 +581,82 @@ footer.site a:hover{color:var(--red)}
       });
       var empty = document.querySelector(pair[1]);
       if(empty) empty.classList.toggle('show', visible===0);
+      grid.querySelectorAll('.series').forEach(function(series){
+        var anyVisible = series.querySelectorAll('.card:not(.hidden-card)').length > 0;
+        series.classList.toggle('hidden-card', !anyVisible);
+        if(anyVisible && series.querySelector('.stage-cards')){
+          var active = series.querySelector('.stage-cards .card.is-active');
+          if(active && active.classList.contains('hidden-card')){
+            var first = series.querySelector('.stage-cards .card:not(.hidden-card)');
+            if(first) window.__baamShowCard && window.__baamShowCard(series, first);
+          }
+        }
+      });
     });
   }
   buttons.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-filter')); }); });
 
+})();
+</script>
+<script>(function(){
+  function cardsOf(series){
+    return Array.prototype.slice.call(series.querySelectorAll('.stage-cards .card'));
+  }
+  function visibleCards(series){
+    return cardsOf(series).filter(function(c){ return !c.classList.contains('hidden-card'); });
+  }
+  function showCard(series, card){
+    cardsOf(series).forEach(function(c){ c.classList.remove('is-active'); });
+    card.classList.add('is-active');
+    var idx = cardsOf(series).indexOf(card);
+    series.querySelectorAll('.thumb').forEach(function(t){
+      t.classList.toggle('is-active', Number(t.getAttribute('data-index')) === idx);
+    });
+  }
+  window.__baamShowCard = showCard;
+  function setExpanded(series, expand){
+    series.setAttribute('aria-expanded', expand ? 'true' : 'false');
+    var btn = series.querySelector('.series-toggle');
+    if(btn) btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+    var stage = series.querySelector('.series-stage');
+    if(stage) stage.hidden = !expand;
+    if(expand){
+      var active = series.querySelector('.stage-cards .card.is-active');
+      var vis = visibleCards(series);
+      if(active && active.classList.contains('hidden-card') && vis.length) showCard(series, vis[0]);
+      else if(!active && vis.length) showCard(series, vis[0]);
+    }
+  }
+  function step(series, dir){
+    var vis = visibleCards(series);
+    if(!vis.length) return;
+    var active = series.querySelector('.stage-cards .card.is-active');
+    var i = vis.indexOf(active);
+    if(i < 0) i = 0;
+    var next = vis[(i + dir + vis.length) % vis.length];
+    showCard(series, next);
+  }
+  document.querySelectorAll('.series').forEach(function(series){
+    var toggle = series.querySelector('.series-toggle');
+    if(toggle) toggle.addEventListener('click', function(){
+      setExpanded(series, series.getAttribute('aria-expanded') !== 'true');
+    });
+    series.querySelectorAll('.thumb').forEach(function(thumb){
+      thumb.addEventListener('click', function(){
+        var card = cardsOf(series)[Number(thumb.getAttribute('data-index'))];
+        if(!card) return;
+        setExpanded(series, true);
+        showCard(series, card);
+      });
+    });
+    var prev = series.querySelector('.stage-prev');
+    var next = series.querySelector('.stage-next');
+    if(prev) prev.addEventListener('click', function(){ step(series, -1); });
+    if(next) next.addEventListener('click', function(){ step(series, 1); });
+    // default: first card active
+    var first = cardsOf(series)[0];
+    if(first) first.classList.add('is-active');
+  });
 })();
 </script>
 </body>
