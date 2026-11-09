@@ -85,9 +85,9 @@ section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-
 .card a.flyer-link{display:block}
 .card .flyer{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:calc(var(--radius) - 6px)}
 /* Past events preview (mini cards) */
-.mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-.card.mini{padding:12px;gap:8px}
-.card.mini h3{font-size:16px}
+.mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;max-width:720px}
+.card.mini{padding:10px;gap:8px}
+.card.mini h3{font-size:15px}
 .card.mini .mini-date{font-size:13.5px;color:var(--muted);font-weight:600}
 .see-all{margin-top:20px}
 .card.featured{border:2px solid var(--red)}
@@ -186,7 +186,7 @@ footer.site a:hover{color:var(--red)}
       <a href="#events">Events</a>
       <a href="past-events.html">Past Events</a>
       <a href="#community">Community</a>
-      <a href="#bands">Bands &amp; Musicians</a>
+      <a href="bands.html">Bands &amp; Musicians</a>
       <a href="#get-involved">Get Involved</a>
       <a href="#about">About</a>
       <a href="#booking">Booking</a>
@@ -256,22 +256,22 @@ footer.site a:hover{color:var(--red)}
 
             <div class="mini-grid" id="past-grid">
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="flyers/halloweeb-2026-10-30.png" target="_blank" rel="noopener"><img class="flyer" src="flyers/halloweeb-2026-10-30.png" alt="Halloweeb flyer"></a>
+          <a class="flyer-link" href="halloweeb.html"><img class="flyer" src="flyers/halloweeb-2026-10-30.png" alt="Halloweeb flyer"></a>
           <h3><a href="halloweeb.html" style="color:inherit">Halloweeb</a></h3>
           <p class="mini-date">Oct 30, 2026</p>
         </article>
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="flyers/tokyo-arcade-2026-09-26.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/tokyo-arcade-2026-09-26.webp" alt="Tokyo Arcade flyer"></a>
+          <a class="flyer-link" href="past-events.html#tokyo-arcade"><img class="flyer" src="flyers/tokyo-arcade-2026-09-26.webp" alt="Tokyo Arcade flyer"></a>
           <h3>Tokyo Arcade</h3>
           <p class="mini-date">Sep 26, 2026</p>
         </article>
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="flyers/j-block-party-2026-09-12.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/j-block-party-2026-09-12.webp" alt="J-Block Party flyer"></a>
+          <a class="flyer-link" href="past-events.html#j-block-party"><img class="flyer" src="flyers/j-block-party-2026-09-12.webp" alt="J-Block Party flyer"></a>
           <h3>J-Block Party</h3>
           <p class="mini-date">Sep 12, 2026</p>
         </article>
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="flyers/fall-j-rock-fest-2026-10-03.jpg" target="_blank" rel="noopener"><img class="flyer" src="flyers/fall-j-rock-fest-2026-10-03.jpg" alt="Fall J-Rock Fest flyer"></a>
+          <a class="flyer-link" href="past-events.html#fall-j-rock-fest"><img class="flyer" src="flyers/fall-j-rock-fest-2026-10-03.jpg" alt="Fall J-Rock Fest flyer"></a>
           <h3>Fall J-Rock Fest</h3>
           <p class="mini-date">Oct 3, 2026</p>
         </article>
@@ -304,7 +304,7 @@ footer.site a:hover{color:var(--red)}
       <div class="logostrip">
         <span class="pill">Merry Go Station</span><span class="pill">Guy Jeans</span><span class="pill">Velvet Turtles</span><span class="pill">Food Coma</span><span class="pill">Petty Tactic</span><span class="pill">Aimai Mirai</span>
       </div>
-      <p style="margin-top:14px"><a href="#bands" style="font-weight:700">Full bands &amp; musicians directory ↓</a></p>
+      <p style="margin-top:14px"><a href="bands.html" style="font-weight:700">Full bands &amp; musicians directory →</a></p>
     </div>
   </section>
 
@@ -332,31 +332,6 @@ footer.site a:hover{color:var(--red)}
           <p><b>The lead sheet library.</b> The server holds a library of hundreds of lead sheets, contributed by members — some from the group behind VGLS — shared with members through the server. It's how a jam with strangers can still play the song: the charts are there.</p>
           <p style="margin-top:18px"><a class="btn red" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord</a></p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BANDS -->
-  <section class="block" id="bands">
-    <div class="wrap">
-      <div class="sec-head"><h2>Bands &amp; Musicians</h2><span class="count">From BAAM event lineups</span></div>
-      <p class="sec-sub">Groups who have played BAAM events, most recent first.</p>
-      <div class="band-grid">
-        <div class="band"><h3>Merry Go Station</h3><p class="genre">J-Rock · Anime · VGM covers</p><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/merrygostation.band/" target="_blank" rel="noopener">@merrygostation.band</a></div>
-        <div class="band"><h3>Guy Jeans</h3><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/guy_jeans_official/" target="_blank" rel="noopener">@guy_jeans_official</a></div>
-        <div class="band"><h3>Velvet Turtles</h3><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/velvetturtlesband/" target="_blank" rel="noopener">@velvetturtlesband</a></div>
-        <div class="band"><h3>Food Coma</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · RocKosplay 2025</p><a class="ig" href="https://www.instagram.com/foodcoma_band/" target="_blank" rel="noopener">@foodcoma_band</a></div>
-        <div class="band"><h3>Petty Tactic</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · J-Block Party — Sep 12, 2026</p><a class="ig" href="https://www.instagram.com/pettytacticband/" target="_blank" rel="noopener">@pettytacticband</a></div>
-        <div class="band"><h3>Aimai Mirai</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · J-Block Party — Sep 12, 2026 · RocKosplay 2024</p><a class="ig" href="https://www.instagram.com/aimai_mirai/" target="_blank" rel="noopener">@aimai_mirai</a></div>
-        <div class="band"><h3>Press Start</h3><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
-        <div class="band"><h3>Interstellar Soundscapes</h3><p class="genre">Jazz · Fusion</p><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
-        <div class="band"><h3>Studio Phoebe</h3><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
-        <div class="band"><h3>Half Past Midnight</h3><p class="played">Played: J-Block Party — Sep 12, 2026</p></div>
-        <div class="band"><h3>Kill the Protagonist</h3><p class="played">Played: RocKosplay 2025 · RocKosplay 2024</p></div>
-        <div class="band"><h3>Project Idol</h3><p class="played">Played: RocKosplay 2025</p></div>
-        <div class="band"><h3>Otaku Ongaku</h3><p class="played">Played: RocKosplay 2025</p></div>
-        <div class="band"><h3>Still Deer</h3><p class="played">Played: RocKosplay 2024</p></div>
-        <div class="band"><h3>Medium Spicy</h3><p class="played">Played: RocKosplay 2024</p></div>
       </div>
     </div>
   </section>
@@ -431,7 +406,7 @@ footer.site a:hover{color:var(--red)}
       </div>
       <div class="foot-links">
         <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Site</b>
-        <a href="#events">Events</a><a href="past-events.html">Past Events</a><a href="#community">Community</a><a href="#bands">Bands &amp; Musicians</a><a href="#get-involved">Get Involved</a><a href="#about">About</a><a href="#booking">Booking</a>
+        <a href="#events">Events</a><a href="past-events.html">Past Events</a><a href="#community">Community</a><a href="bands.html">Bands &amp; Musicians</a><a href="#get-involved">Get Involved</a><a href="#about">About</a><a href="#booking">Booking</a>
       </div>
       <div class="foot-links">
         <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Follow &amp; join</b>
@@ -446,7 +421,6 @@ footer.site a:hover{color:var(--red)}
       <div class="foot-links">
         <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Contact</b>
         <p>General questions: join the <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a> or message <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">@bayareaanimemusic</a>.<br>Email: <a href="mailto:bayareaanimemusic@outlook.com">bayareaanimemusic@outlook.com</a></p>
-        <p>Booking? Use the <a href="#booking">Booking page</a> — it's the only booking contact.</p>
       </div>
     </div>
     <div class="foot-bottom">

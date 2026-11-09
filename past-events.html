@@ -85,9 +85,9 @@ section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-
 .card a.flyer-link{display:block}
 .card .flyer{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:calc(var(--radius) - 6px)}
 /* Past events preview (mini cards) */
-.mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-.card.mini{padding:12px;gap:8px}
-.card.mini h3{font-size:16px}
+.mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;max-width:720px}
+.card.mini{padding:10px;gap:8px}
+.card.mini h3{font-size:15px}
 .card.mini .mini-date{font-size:13.5px;color:var(--muted);font-weight:600}
 .see-all{margin-top:20px}
 .card.featured{border:2px solid var(--red)}
@@ -186,7 +186,7 @@ footer.site a:hover{color:var(--red)}
       <a href="index.html#events">Events</a>
       <a href="past-events.html" aria-current="page">Past Events</a>
       <a href="index.html#community">Community</a>
-      <a href="index.html#bands">Bands &amp; Musicians</a>
+      <a href="bands.html">Bands &amp; Musicians</a>
       <a href="index.html#get-involved">Get Involved</a>
       <a href="index.html#about">About</a>
       <a href="index.html#booking">Booking</a>
@@ -232,7 +232,7 @@ footer.site a:hover{color:var(--red)}
             <a class="more" href="halloweeb.html">Event details →</a>
           </div>
         </article>
-<article class="card" data-type="concert">
+<article class="card" id="tokyo-arcade" data-type="concert">
           <a class="flyer-link" href="flyers/tokyo-arcade-2026-09-26.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/tokyo-arcade-2026-09-26.webp" alt="Tokyo Arcade flyer"></a>
           <div class="top"><div class="datebox"><b>26</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
           <h3>Tokyo Arcade</h3>
@@ -241,7 +241,7 @@ footer.site a:hover{color:var(--red)}
           <p class="lineup"><b>Lineup:</b> Press Start · Interstellar Soundscapes · Studio Phoebe</p>
           <div class="foot"><a class="more" href="https://www.eventbrite.com/e/tokyo-arcade-tickets-2001708576236" target="_blank" rel="noopener">Event listing →</a></div>
         </article>
-<article class="card" data-type="concert">
+<article class="card" id="j-block-party" data-type="concert">
           <a class="flyer-link" href="flyers/j-block-party-2026-09-12.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/j-block-party-2026-09-12.webp" alt="J-Block Party flyer"></a>
           <div class="top"><div class="datebox"><b>12</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
           <h3>J-Block Party</h3>
@@ -250,7 +250,7 @@ footer.site a:hover{color:var(--red)}
           <p class="lineup"><b>Lineup:</b> Aimai Mirai · Petty Tactic · Half Past Midnight</p>
           <div class="foot"><span class="price">$20 / $24 / $32</span><a class="more" href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">Event page →</a></div>
         </article>
-<article class="card" data-type="concert">
+<article class="card" id="fall-j-rock-fest" data-type="concert">
           <a class="flyer-link" href="flyers/fall-j-rock-fest-2026-10-03.jpg" target="_blank" rel="noopener"><img class="flyer" src="flyers/fall-j-rock-fest-2026-10-03.jpg" alt="Fall J-Rock Fest flyer"></a>
           <div class="top"><div class="datebox"><b>3</b><span>Oct 2026</span></div><span class="type concert">Concert</span></div>
           <h3>Fall J-Rock Fest</h3>
@@ -259,15 +259,71 @@ footer.site a:hover{color:var(--red)}
           <p class="lineup"><b>Lineup:</b> Food Coma · Petty Tactic · Aimai Mirai</p>
           <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Photos on Instagram →</a></div>
         </article>
-<article class="card" data-type="jam festival">
+<article class="card" id="magwest-jam-2026" data-type="jam festival">
           <a class="flyer-link" href="flyers/magwest-jam-2026.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/magwest-jam-2026.webp" alt="MAGWest Jam 2026 flyer"></a>
-          <div class="top"><div class="datebox"><b>’24–’26</b><span>MAGWest</span></div><span class="type">Jam Session</span></div>
-          <h3>MAGWest Jam Sessions — 2024, 2025, 2026</h3>
+          <div class="top"><div class="datebox"><b>15</b><span>Aug 2026</span></div><span class="type">Jam Session</span></div>
+          <h3>MAGWest Jam 2026</h3>
           <p class="venue">DoubleTree by Hilton · San Jose</p>
-          <p class="detail">BAAM sponsored the 2024 Japanese Music Open Jam/Karaoke, presented the 2025 Guided Jam Session, and co-directed the jam in 2026.</p>
-          <div class="foot"><a class="more" href="https://www.youtube.com/watch?v=dbiYqEPXr-E" target="_blank" rel="noopener">Watch the 2025 jam →</a><a class="more" href="https://www.youtube.com/watch?v=qCUtaJKr_hg" target="_blank" rel="noopener">2024 jam →</a></div>
+          <p class="detail">BAAM co-directed the Guided Anime Jam — Saturday 5:30–7:30 PM, all levels welcome.</p>
         </article>
-<article class="card" data-type="concert">
+<article class="card" id="dueling-pianos-magwest" data-type="pianos festival">
+          <a class="flyer-link" href="flyers/dueling-pianos-magwest-2026-08-15.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/dueling-pianos-magwest-2026-08-15.webp" alt="Dueling Pianos at MAGWest flyer"></a>
+          <div class="top"><div class="datebox"><b>15</b><span>Aug 2026</span></div><span class="type">Dueling Pianos</span></div>
+          <h3>Dueling Pianos @ MAGWest</h3>
+          <p class="venue">DoubleTree by Hilton · San Jose (Steakhouse Stage)</p>
+          <p class="detail">BAAM's dueling pianos set at MAGWest — two pianos, song requests, anime and game music. Saturday, August 15, 2026, Steakhouse Stage.</p>
+          <p class="lineup"><b>Pianists:</b> eLEDiem Piano · Quintec Music · raidsrc</p>
+        </article>
+<article class="card" id="dueling-pianos-fanime" data-type="pianos">
+          <a class="flyer-link" href="flyers/dueling-pianos-fanime-2026-05-23.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/dueling-pianos-fanime-2026-05-23.webp" alt="Dueling Pianos at Fanime flyer"></a>
+          <div class="top"><div class="datebox"><b>23</b><span>May 2026</span></div><span class="type">Dueling Pianos</span></div>
+          <h3>Dueling Pianos @ Fanime</h3>
+          <p class="venue">San Jose Convention Center · Room 231</p>
+          <p class="detail">BAAM's dueling pianos set at Fanime — two pianos, song requests, anime and game music. Saturday 7–8 PM, Room 231 (second floor).</p>
+          <p class="lineup"><b>Pianists:</b> eLEDiem Piano · Quintec Music · raidsrc · tsukinara</p>
+        </article>
+<article class="card" id="spring-j-rock-fest" data-type="concert">
+          <a class="flyer-link" href="flyers/spring-j-rock-fest-2026-05-09.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/spring-j-rock-fest-2026-05-09.webp" alt="Spring J-Rock Fest flyer"></a>
+          <div class="top"><div class="datebox"><b>9</b><span>May 2026</span></div><span class="type concert">Concert</span></div>
+          <h3>Spring J-Rock Fest</h3>
+          <p class="venue">Tamper Room · Fremont</p>
+          <p class="detail">A four-band J-Rock bill — J-Rock, anisongs, VTubers, and VGM. Saturday 7:30 PM.</p>
+          <p class="lineup"><b>Lineup:</b> teramisu · bluefilm · Half Past Midnight · Petty Tactic</p>
+          <div class="foot"><span class="price">$20 / $25</span></div>
+        </article>
+<article class="card" id="winter-j-rock-fest" data-type="concert">
+          <a class="flyer-link" href="flyers/winter-j-rock-fest-2026-01-24.jpg" target="_blank" rel="noopener"><img class="flyer" src="flyers/winter-j-rock-fest-2026-01-24.jpg" alt="Winter J-Rock Fest flyer"></a>
+          <div class="top"><div class="datebox"><b>24</b><span>Jan 2026</span></div><span class="type concert">Concert</span></div>
+          <h3>Winter J-Rock Fest</h3>
+          <p class="venue">Tamper Room · Fremont</p>
+          <p class="detail">A four-band J-Rock bill with set times — J-Rock, anisongs, VTubers, and Vocaloid. Saturday 7 PM.</p>
+          <p class="lineup"><b>Lineup:</b> Half Past Midnight (7 PM) · bluefilm (8 PM) · Petty Tactic (9 PM) · Aimai Mirai (10 PM)</p>
+          <div class="foot"><span class="price">$10 / $15 presale</span></div>
+        </article>
+<article class="card" id="yumecon-anime-music-game-show" data-type="festival">
+          <a class="flyer-link" href="flyers/yumecon-anime-music-game-show-2025-11-15.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/yumecon-anime-music-game-show-2025-11-15.webp" alt="Anime Music Game Show at YumeCon flyer"></a>
+          <div class="top"><div class="datebox"><b>15</b><span>Nov 2025</span></div><span class="type">Panel</span></div>
+          <h3>Anime Music Game Show — YumeCon</h3>
+          <p class="venue">YumeConUSA · Panel Room 2</p>
+          <p class="detail">BAAM's audience-participation anime music game show panel at YumeConUSA. Saturday 2:45–3:45 PM, Panel Room 2, DoubleTree by Hilton, San Jose.</p>
+        </article>
+<article class="card" id="magwest-jam-2025" data-type="jam festival">
+          <a class="flyer-link" href="flyers/magwest-jam-2025.jpg" target="_blank" rel="noopener"><img class="flyer" src="flyers/magwest-jam-2025.jpg" alt="MAGWest Jam 2025 flyer"></a>
+          <div class="top"><div class="datebox"><b>8</b><span>Aug 2025</span></div><span class="type">Jam Session</span></div>
+          <h3>MAGWest Jam 2025</h3>
+          <p class="venue">DoubleTree by Hilton · San Jose</p>
+          <p class="detail">BAAM presented the Guided Jam Session — Friday 9–11 PM, all levels welcome, hosted by BAAM at the MAGWest Jamspace. MAGWest badge required.</p>
+          <div class="foot"><a class="more" href="https://www.youtube.com/watch?v=dbiYqEPXr-E" target="_blank" rel="noopener">Watch the 2025 jam →</a></div>
+        </article>
+<article class="card" id="magwest-jam-2024" data-type="jam festival">
+          <a class="flyer-link" href="flyers/magwest-jam-2024.jpg" target="_blank" rel="noopener"><img class="flyer" src="flyers/magwest-jam-2024.jpg" alt="MAGWest Jam 2024 flyer"></a>
+          <div class="top"><div class="datebox"><b>27</b><span>Sep 2024</span></div><span class="type">Jam Session</span></div>
+          <h3>MAGWest Jam 2024</h3>
+          <p class="venue">DoubleTree by Hilton · San Jose</p>
+          <p class="detail">BAAM sponsored the Japanese Music Open Jam/Karaoke — a live anime music jam session, Friday 9 PM.</p>
+          <div class="foot"><a class="more" href="https://www.youtube.com/watch?v=qCUtaJKr_hg" target="_blank" rel="noopener">2024 jam →</a></div>
+        </article>
+<article class="card" id="rockosplay-2025" data-type="concert">
           <a class="flyer-link" href="flyers/rockosplay-2025-07-19.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/rockosplay-2025-07-19.webp" alt="RocKosplay 2025 flyer"></a>
           <div class="top"><div class="datebox"><b>19</b><span>Jul 2025</span></div><span class="type concert">Concert</span></div>
           <h3>RocKosplay 2025</h3>
@@ -276,7 +332,7 @@ footer.site a:hover{color:var(--red)}
           <p class="lineup"><b>Lineup:</b> Kill the Protagonist · Food Coma · Project Idol · Otaku Ongaku</p>
           <div class="foot"><span class="price">$25</span></div>
         </article>
-<article class="card" data-type="jam">
+<article class="card" id="baam-jam" data-type="jam">
           <a class="flyer-link" href="flyers/baam-jam-2025-06-14.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/baam-jam-2025-06-14.webp" alt="BAAM Jam flyer"></a>
           <div class="top"><div class="datebox"><b>14</b><span>Jun 2025</span></div><span class="type">Jam Session</span></div>
           <h3>BAAM Jam</h3>
@@ -284,7 +340,7 @@ footer.site a:hover{color:var(--red)}
           <p class="detail">Open anime jam session — bring your instrument and play your favorite anime tunes with other musicians. All levels welcome, lead sheets provided.</p>
           <div class="foot"><a class="more" href="https://www.eventbrite.com/e/baam-jam-anime-jam-session-tickets-1376500683599" target="_blank" rel="noopener">Event listing →</a></div>
         </article>
-<article class="card" data-type="concert">
+<article class="card" id="rockosplay-2024" data-type="concert">
           <a class="flyer-link" href="flyers/rockosplay-2024-06-07.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/rockosplay-2024-06-07.webp" alt="RocKosplay 2024 flyer"></a>
           <div class="top"><div class="datebox"><b>7</b><span>Jun 2024</span></div><span class="type concert">Concert</span></div>
           <h3>RocKosplay 2024</h3>
@@ -293,15 +349,15 @@ footer.site a:hover{color:var(--red)}
           <p class="lineup"><b>Lineup:</b> Kill the Protagonist · Aimai Mirai · Still Deer · Medium Spicy</p>
           <div class="foot"><a class="more" href="https://bayareaanimemusic.org/rockosplay-24-gallery/" target="_blank" rel="noopener">Photo &amp; video gallery →</a></div>
         </article>
-<article class="card" data-type="karaoke">
-          <a class="flyer-link" href="flyers/rockaraoke-2024-08-10.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/rockaraoke-2024-08-10.webp" alt="RocKaraoke flyer"></a>
+<article class="card" id="rockaraoke" data-type="karaoke">
+          <a class="flyer-link" href="flyers/rockaraoke-2024-08-10-night.jpg" target="_blank" rel="noopener"><img class="flyer" src="flyers/rockaraoke-2024-08-10-night.jpg" alt="RocKaraoke flyer"></a>
           <div class="top"><div class="datebox"><b>10</b><span>Aug 2024</span></div><span class="type">Live Band Karaoke</span></div>
           <h3>RocKaraoke</h3>
           <p class="venue">Homestead Bowl &amp; X-Bar, Cupertino</p>
           <p class="detail">Karaoke with a real band behind you — sing anime favorites with live musicians instead of a backing track.</p>
-          <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">See the Instagram Highlight →</a></div>
+          <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">See the Instagram Highlight →</a><a class="more" href="flyers/rockaraoke-2024-08-10.webp" target="_blank" rel="noopener">Original flyer →</a></div>
         </article>
-<article class="card" data-type="concert">
+<article class="card" id="acg-rhapsody" data-type="concert">
           <a class="flyer-link" href="flyers/acg-rhapsody-2024-10-06.jpg" target="_blank" rel="noopener"><img class="flyer" src="flyers/acg-rhapsody-2024-10-06.jpg" alt="ACG Rhapsody flyer"></a>
           <div class="top"><div class="datebox"><b>6</b><span>Oct 2024</span></div><span class="type concert">Concert</span></div>
           <h3>ACG Rhapsody</h3>
@@ -325,7 +381,7 @@ footer.site a:hover{color:var(--red)}
       </div>
       <div class="foot-links">
         <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Site</b>
-        <a href="index.html#events">Events</a><a href="past-events.html">Past Events</a><a href="index.html#community">Community</a><a href="index.html#bands">Bands &amp; Musicians</a><a href="index.html#get-involved">Get Involved</a><a href="index.html#about">About</a><a href="index.html#booking">Booking</a>
+        <a href="index.html#events">Events</a><a href="past-events.html">Past Events</a><a href="index.html#community">Community</a><a href="bands.html">Bands &amp; Musicians</a><a href="index.html#get-involved">Get Involved</a><a href="index.html#about">About</a><a href="index.html#booking">Booking</a>
       </div>
       <div class="foot-links">
         <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Follow &amp; join</b>
@@ -340,7 +396,6 @@ footer.site a:hover{color:var(--red)}
       <div class="foot-links">
         <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Contact</b>
         <p>General questions: join the <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a> or message <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">@bayareaanimemusic</a>.<br>Email: <a href="mailto:bayareaanimemusic@outlook.com">bayareaanimemusic@outlook.com</a></p>
-        <p>Booking? Use the <a href="index.html#booking">Booking page</a> — it's the only booking contact.</p>
       </div>
     </div>
     <div class="foot-bottom">

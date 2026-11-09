@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="Bands and musicians who have played BAAM events, most recent first." />
+<meta property="og:title" content="Bands &amp; Musicians — Bay Area Anime Music" />
+<meta property="og:description" content="Bands and musicians who have played BAAM events, most recent first." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bayareaanimemusic.org/bands.html" />
+<link rel="icon" href="data:," />
+<title>Bands &amp; Musicians — Bay Area Anime Music</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f4ee; --bg2:#efe9dd; --surface:#ffffff; --surface2:#fbf9f4;
+  --ink:#17150f; --ink2:#4a463c; --muted:#6f6a5e; --line:#ddd5c4;
+  --red:#c9331f; --red-dark:#a32716; --teal:#0e6b62; --gold:#b7791f;
+  --nav-bg:rgba(247,244,238,.94); --booking-bg:#14120e; --booking-ink:#f3efe4; --booking-muted:#b9b2a0; --booking-line:#3a362c;
+  --chip:#efe9dd; --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#131210; --bg2:#1b1a16; --surface:#1e1d19; --surface2:#23221d;
+    --ink:#f0ecdf; --ink2:#cfc9b8; --muted:#9d9787; --line:#34322a;
+    --red:#e8604a; --red-dark:#e8604a; --teal:#3fb3a6; --gold:#d9a441;
+    --nav-bg:rgba(19,18,16,.94); --chip:#26241e;
+    --booking-bg:#0c0b09; --booking-ink:#f3efe4; --booking-muted:#a8a292; --booking-line:#2e2b24;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--red);text-decoration-color:rgba(0,0,0,0)}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.12;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+img{max-width:100%}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+.navrow{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+.brand{font-weight:900;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;line-height:1.05}
+.brand span{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+nav.main{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
+nav.main a{color:var(--ink);font-weight:600;font-size:14.5px;padding:7px 10px;border-radius:8px;text-decoration:none}
+nav.main a:hover{background:var(--chip);text-decoration:none}
+.navbtns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;padding:10px 16px;border-radius:9px;border:2px solid var(--ink);text-decoration:none;cursor:pointer;background:var(--surface);color:var(--ink);transition:transform .12s ease, background .12s ease}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn.dark{background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent}
+.btn.small{padding:7px 12px;font-size:13.5px}
+
+/* Hero */
+.hero{border-bottom:2px solid var(--ink);background:var(--bg2)}
+.hero-inner{padding:52px 0 44px;max-width:820px}
+.hero h1{font-size:clamp(38px,6.5vw,64px);font-weight:900}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .lede{margin-top:16px;font-size:clamp(17px,2.4vw,20px);color:var(--ink2);max-width:640px}
+.hero .cta{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+.hero .meta{margin-top:22px;font-size:13.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+/* Sections */
+section.block{padding:52px 0}
+section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.sec-head h2{font-size:clamp(26px,4vw,36px);font-weight:800}
+.sec-head .count{font-family:"Archivo Narrow",sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.sec-sub{color:var(--ink2);max-width:680px;margin-bottom:24px}
+
+/* Filters */
+.filters{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0 22px}
+.filters button{font:inherit;font-size:13.5px;font-weight:700;padding:7px 13px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink2);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* Event cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px}
+.card a.flyer-link{display:block}
+.card .flyer{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:calc(var(--radius) - 6px)}
+/* Past events preview (mini cards) */
+.mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;max-width:720px}
+.card.mini{padding:10px;gap:8px}
+.card.mini h3{font-size:15px}
+.card.mini .mini-date{font-size:13.5px;color:var(--muted);font-weight:600}
+.see-all{margin-top:20px}
+.card.featured{border:2px solid var(--red)}
+.card .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.datebox{font-family:"Archivo Narrow",sans-serif;text-align:center;background:var(--ink);color:var(--bg);border-radius:9px;padding:7px 10px;line-height:1.05;flex:none}
+.datebox b{display:block;font-size:19px}
+.datebox span{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.type{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;background:var(--chip);color:var(--ink2);padding:5px 9px;border-radius:999px;white-space:nowrap}
+.type.concert{background:#f6ded9;color:#8f2413}
+@media (prefers-color-scheme: dark){.type.concert{background:#3d211b;color:#f0a08e}}
+.card h3{font-size:20px;font-weight:800}
+.card .venue{font-weight:600;font-size:14.5px;color:var(--ink2)}
+.card .lineup{font-size:15px}
+.card .lineup b{font-weight:700}
+.card .detail{font-size:14.5px;color:var(--ink2)}
+.card .foot{margin-top:auto;padding-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.price{font-weight:800;font-size:15px}
+.card a.more{font-weight:700;font-size:14.5px}
+.hidden-card{display:none}
+.empty-note{display:none;background:var(--surface);border:1.5px dashed var(--line);border-radius:var(--radius);padding:18px;color:var(--ink2);font-size:15px}
+.empty-note.show{display:block}
+
+/* Community strip */
+.strip{background:var(--teal);color:#fff;border-radius:18px;padding:30px 28px;display:grid;grid-template-columns:1.4fr .6fr;gap:22px;align-items:center}
+.strip h2{color:#fff;font-size:clamp(24px,3.6vw,32px);font-weight:800}
+.strip p{color:#dff2ef;margin-top:8px;max-width:560px}
+.strip .btn{background:#fff;border-color:#fff;color:#0b4f47;justify-self:end}
+@media (max-width:720px){.strip{grid-template-columns:1fr}.strip .btn{justify-self:start}}
+
+/* Two-col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.prose p+p{margin-top:14px}
+.prose{color:var(--ink2)}
+.prose b,.prose strong{color:var(--ink)}
+.video-box{background:var(--ink);color:var(--bg);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px;justify-content:center}
+.video-box h3{font-size:22px}
+.video-box p{color:var(--ink2);font-size:15px}
+@media (prefers-color-scheme: dark){.video-box p{color:#b9b2a0}}
+.video-box .btn{align-self:flex-start;background:var(--red);border-color:var(--red);color:#fff}
+
+/* Bands */
+.band-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.band{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:17px}
+.band h3{font-size:17.5px;font-weight:800}
+.band .genre{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);margin-top:2px}
+.band .played{font-size:14px;color:var(--ink2);margin-top:8px}
+.band .ig{font-size:14px;margin-top:8px;display:inline-block}
+
+/* Logo strips */
+.logostrip{display:flex;gap:10px;flex-wrap:wrap}
+.logostrip .pill{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 16px;font-weight:700;font-size:14.5px}
+
+/* Get involved */
+.gi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.gi{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:20px}
+.gi h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.gi p{font-size:15px;color:var(--ink2)}
+
+/* About lists */
+.deflist{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+.def{background:var(--surface2);border:1.5px solid var(--line);border-radius:var(--radius);padding:18px}
+.def h3{font-size:17px;font-weight:800}
+.def p{font-size:14.5px;color:var(--ink2);margin-top:6px}
+
+/* Booking */
+section.booking{background:var(--booking-bg);color:var(--booking-ink);padding:60px 0}
+section.booking .sec-head h2{color:var(--booking-ink)}
+section.booking .sec-head .count{color:#e8604a}
+section.booking .sec-sub{color:var(--booking-muted)}
+section.booking h3{color:var(--booking-ink)}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:20px 0 30px}
+.proj{border:1.5px solid var(--booking-line);border-radius:var(--radius);padding:18px;background:rgba(255,255,255,.02)}
+.proj h3{font-size:17px;font-weight:800}
+.proj p{font-size:14.5px;color:var(--booking-muted);margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:14px 0 30px}
+.step{border-top:3px solid #e8604a;padding-top:12px}
+.step b{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#e8604a}
+.step p{font-size:15px;color:var(--booking-muted);margin-top:5px}
+/* Footer */
+footer.site{border-top:2px solid var(--ink);padding:38px 0 46px;background:var(--bg2)}
+.foot-grid{display:flex;gap:28px;flex-wrap:wrap;justify-content:space-between}
+footer.site h3{font-size:18px;font-weight:900}
+footer.site p,footer.site a{font-size:14.5px;color:var(--ink2)}
+footer.site a:hover{color:var(--red)}
+.foot-links{display:flex;flex-direction:column;gap:5px}
+.foot-bottom{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a class="brand" href="index.html">Bay Area Anime Music<span>BAAM · Bay Area, CA</span></a>
+    <nav class="main" aria-label="Main">
+      <a href="index.html#events">Events</a>
+      <a href="past-events.html">Past Events</a>
+      <a href="index.html#community">Community</a>
+      <a href="bands.html" aria-current="page">Bands &amp; Musicians</a>
+      <a href="index.html#get-involved">Get Involved</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#booking">Booking</a>
+    </nav>
+    <div class="navbtns">
+      <a class="btn red small" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join Discord</a>
+      <a class="btn dark small" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- BANDS & MUSICIANS DIRECTORY -->
+  <section class="block" id="bands" style="padding-top:34px">
+    <div class="wrap">
+      <p><a href="index.html" style="font-weight:700">← Back to home</a></p>
+      <div class="sec-head"><h2>Bands &amp; Musicians</h2><span class="count">From BAAM event lineups</span></div>
+      <p class="sec-sub">Groups who have played BAAM events, most recent first.</p>
+      <div class="band-grid">
+        <div class="band"><h3>Merry Go Station</h3><p class="genre">J-Rock · Anime · VGM covers</p><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/merrygostation.band/" target="_blank" rel="noopener">@merrygostation.band</a></div>
+        <div class="band"><h3>Guy Jeans</h3><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/guy_jeans_official/" target="_blank" rel="noopener">@guy_jeans_official</a></div>
+        <div class="band"><h3>Velvet Turtles</h3><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/velvetturtlesband/" target="_blank" rel="noopener">@velvetturtlesband</a></div>
+        <div class="band"><h3>Food Coma</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · RocKosplay 2025</p><a class="ig" href="https://www.instagram.com/foodcoma_band/" target="_blank" rel="noopener">@foodcoma_band</a></div>
+        <div class="band"><h3>Petty Tactic</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · J-Block Party — Sep 12, 2026</p><a class="ig" href="https://www.instagram.com/pettytacticband/" target="_blank" rel="noopener">@pettytacticband</a></div>
+        <div class="band"><h3>Aimai Mirai</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · J-Block Party — Sep 12, 2026 · RocKosplay 2024</p><a class="ig" href="https://www.instagram.com/aimai_mirai/" target="_blank" rel="noopener">@aimai_mirai</a></div>
+        <div class="band"><h3>Press Start</h3><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
+        <div class="band"><h3>Interstellar Soundscapes</h3><p class="genre">Jazz · Fusion</p><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
+        <div class="band"><h3>Studio Phoebe</h3><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
+        <div class="band"><h3>Half Past Midnight</h3><p class="played">Played: J-Block Party — Sep 12, 2026</p></div>
+        <div class="band"><h3>Kill the Protagonist</h3><p class="played">Played: RocKosplay 2025 · RocKosplay 2024</p></div>
+        <div class="band"><h3>Project Idol</h3><p class="played">Played: RocKosplay 2025</p></div>
+        <div class="band"><h3>Otaku Ongaku</h3><p class="played">Played: RocKosplay 2025</p></div>
+        <div class="band"><h3>Still Deer</h3><p class="played">Played: RocKosplay 2024</p></div>
+        <div class="band"><h3>Medium Spicy</h3><p class="played">Played: RocKosplay 2024</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="max-width:340px">
+        <h3>Bay Area Anime Music</h3>
+        <p style="margin-top:8px">California nonprofit public benefit corporation.</p>
+      </div>
+      <div class="foot-links">
+        <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Site</b>
+        <a href="index.html#events">Events</a><a href="past-events.html">Past Events</a><a href="index.html#community">Community</a><a href="bands.html">Bands &amp; Musicians</a><a href="index.html#get-involved">Get Involved</a><a href="index.html#about">About</a><a href="index.html#booking">Booking</a>
+      </div>
+      <div class="foot-links">
+        <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Follow &amp; join</b>
+        <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram — @bayareaanimemusic</a>
+        <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord — join the server</a>
+        <a href="https://facebook.com/people/Bay-Area-Anime-Music/61563620396709/" target="_blank" rel="noopener">Facebook — Bay Area Anime Music</a>
+        <a href="https://x.com/BAAM_animemusic" target="_blank" rel="noopener">X — @BAAM_animemusic</a>
+        <a href="https://www.threads.net/@bayareaanimemusic" target="_blank" rel="noopener">Threads — @bayareaanimemusic</a>
+        <a href="https://www.youtube.com/@bayareaanimemusic" target="_blank" rel="noopener">YouTube — @bayareaanimemusic</a>
+        <a href="https://www.tiktok.com/@bayareaanimemusic" target="_blank" rel="noopener">TikTok — @bayareaanimemusic</a>
+      </div>
+      <div class="foot-links">
+        <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Contact</b>
+        <p>General questions: join the <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a> or message <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">@bayareaanimemusic</a>.<br>Email: <a href="mailto:bayareaanimemusic@outlook.com">bayareaanimemusic@outlook.com</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Bay Area Anime Music · Community nonprofit</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('.filters button');
+  function apply(filter){
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-filter')===filter ? 'true':'false'); });
+    [['#upcoming-grid','#upcoming-empty'],['#past-grid','#past-empty']].forEach(function(pair){
+      var grid = document.querySelector(pair[0]); if(!grid) return;
+      var visible = 0;
+      grid.querySelectorAll('.card').forEach(function(card){
+        var show = filter==='all' || (card.getAttribute('data-type')||'').split(' ').indexOf(filter) !== -1;
+        card.classList.toggle('hidden-card', !show);
+        if(show) visible++;
+      });
+      var empty = document.querySelector(pair[1]);
+      if(empty) empty.classList.toggle('show', visible===0);
+    });
+  }
+  buttons.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-filter')); }); });
+
+})();
+</script>
+</body>
+</html>
