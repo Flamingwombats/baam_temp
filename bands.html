@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="en">
-<!doctype html>
-<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -178,6 +176,68 @@ footer.site p,footer.site a{font-size:14.5px;color:var(--ink2)}
 footer.site a:hover{color:var(--red)}
 .foot-links{display:flex;flex-direction:column;gap:5px}
 .foot-bottom{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+
+/* ============================================================
+   Mobile refinements — Past Events archive (max-width: 640px)
+   Added 2026-11-09 from the mobile-design evaluation.
+   Desktop (641px+) is untouched.
+   ============================================================ */
+@media (max-width:640px){
+  /* --- Page margins: the core ask — reclaim horizontal space --- */
+  .wrap{padding:0 12px}
+  section.block{padding:28px 0}
+  /* The archive section carries inline style="padding-top:34px",
+     which beats any stylesheet rule, so this override needs
+     !important. */
+  section#past{padding-top:28px !important}
+
+  /* --- Sticky header: slimmer chrome on mobile --- */
+  .navrow{gap:10px;padding:10px 0}
+  .brand{font-size:17px;gap:9px}
+  .brand-logo{width:36px;height:36px}
+  nav.main a{padding:10px 10px;font-size:14px}
+  .navbtns{gap:6px}
+  .btn.small{padding:10px 14px}
+
+  /* --- Filters: real touch targets --- */
+  .filters{gap:8px;margin:14px 0 16px}
+  .filters button{padding:11px 15px}
+
+  /* --- Grid: single column; removes the 320px minimum that
+         overflows on small screens --- */
+  .grid{grid-template-columns:1fr;gap:12px}
+
+  /* --- Cards: less padding, tighter gaps, slightly smaller title --- */
+  .card{padding:14px;gap:8px}
+  .card h3{font-size:18px}
+
+  /* --- Series (grouped) boxes --- */
+  .series{padding:12px;gap:10px}
+  .series-toggle{padding:12px 2px}
+  .series-toggle .series-title{font-size:17px}
+  .series-sub{font-size:13.5px}
+  .series-thumbs{gap:10px}
+  .thumb{width:80px}
+  .thumb img{width:80px}
+  .thumb span{font-size:12px}
+
+  /* --- Carousel stage: 44px arrows, tighter gaps --- */
+  .series-stage{gap:8px}
+  .stage-nav{width:44px;height:44px;font-size:24px}
+
+  /* --- Footer + empty state --- */
+  footer.site{padding:28px 0 32px}
+  .foot-grid{gap:20px}
+  .empty-note{padding:14px}
+}
+
+/* On phones (<=640px): the stage card is too narrow for its
+   datebox + type pill beside two 44px arrows, so stack the card
+   full-width above the arrows. */
+@media (max-width:640px){
+  .series-stage{flex-wrap:wrap;justify-content:center}
+  .stage-cards{flex:1 1 100%;order:-1}
+}
 </style>
 </head>
 <body>
@@ -195,7 +255,7 @@ footer.site a:hover{color:var(--red)}
       <a href="index.html#booking">Booking</a>
     </nav>
     <div class="navbtns">
-      <a class="btn red small" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join Discord</a>
+      <a class="btn red small" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a>
       <a class="btn dark small" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>

@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians and the live Japanese music scene: concerts, jam sessions, and community events." />
+<meta name="description" content="Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians putting on live concerts, jam sessions, and community events." />
 <meta property="og:title" content="Bay Area Anime Music — Live Anime, J-Rock &amp; VGM in the Bay Area" />
-<meta property="og:description" content="Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians and the live Japanese music scene: concerts, jam sessions, and community events." />
+<meta property="og:description" content="Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians putting on live concerts, jam sessions, and community events." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bayareaanimemusic.org/" />
 <link rel="icon" href="baam-logo.jpg" />
@@ -79,9 +79,6 @@ section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-
 .sec-sub{color:var(--ink2);max-width:680px;margin-bottom:24px}
 
 /* Filters */
-.filters{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0 22px}
-.filters button{font:inherit;font-size:13.5px;font-weight:700;padding:7px 13px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink2);cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
 /* Event cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
@@ -179,6 +176,68 @@ footer.site p,footer.site a{font-size:14.5px;color:var(--ink2)}
 footer.site a:hover{color:var(--red)}
 .foot-links{display:flex;flex-direction:column;gap:5px}
 .foot-bottom{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+
+/* ============================================================
+   Mobile refinements — Past Events archive (max-width: 640px)
+   Added 2026-11-09 from the mobile-design evaluation.
+   Desktop (641px+) is untouched.
+   ============================================================ */
+@media (max-width:640px){
+  /* --- Page margins: the core ask — reclaim horizontal space --- */
+  .wrap{padding:0 12px}
+  section.block{padding:28px 0}
+  /* The archive section carries inline style="padding-top:34px",
+     which beats any stylesheet rule, so this override needs
+     !important. */
+  section#past{padding-top:28px !important}
+
+  /* --- Sticky header: slimmer chrome on mobile --- */
+  .navrow{gap:10px;padding:10px 0}
+  .brand{font-size:17px;gap:9px}
+  .brand-logo{width:36px;height:36px}
+  nav.main a{padding:10px 10px;font-size:14px}
+  .navbtns{gap:6px}
+  .btn.small{padding:10px 14px}
+
+  /* --- Filters: real touch targets --- */
+  .filters{gap:8px;margin:14px 0 16px}
+  .filters button{padding:11px 15px}
+
+  /* --- Grid: single column; removes the 320px minimum that
+         overflows on small screens --- */
+  .grid{grid-template-columns:1fr;gap:12px}
+
+  /* --- Cards: less padding, tighter gaps, slightly smaller title --- */
+  .card{padding:14px;gap:8px}
+  .card h3{font-size:18px}
+
+  /* --- Series (grouped) boxes --- */
+  .series{padding:12px;gap:10px}
+  .series-toggle{padding:12px 2px}
+  .series-toggle .series-title{font-size:17px}
+  .series-sub{font-size:13.5px}
+  .series-thumbs{gap:10px}
+  .thumb{width:80px}
+  .thumb img{width:80px}
+  .thumb span{font-size:12px}
+
+  /* --- Carousel stage: 44px arrows, tighter gaps --- */
+  .series-stage{gap:8px}
+  .stage-nav{width:44px;height:44px;font-size:24px}
+
+  /* --- Footer + empty state --- */
+  footer.site{padding:28px 0 32px}
+  .foot-grid{gap:20px}
+  .empty-note{padding:14px}
+}
+
+/* On phones (<=640px): the stage card is too narrow for its
+   datebox + type pill beside two 44px arrows, so stack the card
+   full-width above the arrows. */
+@media (max-width:640px){
+  .series-stage{flex-wrap:wrap;justify-content:center}
+  .stage-cards{flex:1 1 100%;order:-1}
+}
 </style>
 </head>
 <body>
@@ -196,7 +255,7 @@ footer.site a:hover{color:var(--red)}
       <a href="#booking">Booking</a>
     </nav>
     <div class="navbtns">
-      <a class="btn red small" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join Discord</a>
+      <a class="btn red small" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a>
       <a class="btn dark small" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
@@ -209,14 +268,13 @@ footer.site a:hover{color:var(--red)}
     <div class="wrap hero-inner">
       <div class="hero-copy">
         <h1>Live anime music, played by <em>Bay Area musicians</em>.</h1>
-        <p class="lede">Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians and the live Japanese music scene: concerts, jam sessions, and community events.</p>
+        <p class="lede">Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians putting on live concerts, jam sessions, and community events.</p>
         <div class="cta">
           <a class="btn red" href="#past">Browse past events</a>
           <a class="btn" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord</a>
           <a class="btn ghost" href="#booking">Booking →</a>
         </div>
-        <p class="meta">Anisong · J-Rock · J-Pop · VGM · Jazz &amp; Fusion — across the Bay Area</p>
-      </div>
+        </div>
       <img class="hero-logo" src="baam-logo.jpg" alt="Bay Area Anime Music logo" width="200" height="200">
     </div>
   </div>
@@ -224,17 +282,7 @@ footer.site a:hover{color:var(--red)}
   <!-- UPCOMING EVENTS -->
   <section class="block" id="events" style="padding-bottom:26px">
     <div class="wrap">
-      <div class="sec-head"><h2>Upcoming Events</h2><span class="count">Listed here, on the main page</span></div>
-      <p class="sec-sub">Every BAAM event — concerts, jam sessions, live band karaoke, dueling pianos, panels, meetups, and busking sessions — is listed here first.</p>
-
-      <div class="filters" role="group" aria-label="Filter events by type">
-        <button type="button" data-filter="all" aria-pressed="true">All types</button>
-        <button type="button" data-filter="concert" aria-pressed="false">Concerts</button>
-        <button type="button" data-filter="jam" aria-pressed="false">Jam Sessions</button>
-        <button type="button" data-filter="karaoke" aria-pressed="false">Live Band Karaoke</button>
-        <button type="button" data-filter="pianos" aria-pressed="false">Dueling Pianos</button>
-        <button type="button" data-filter="festival" aria-pressed="false">Festival / Con</button>
-      </div>
+      <div class="sec-head"><h2>Upcoming Events</h2></div>
 
       <div class="grid" id="upcoming-grid">
       </div>
@@ -242,28 +290,16 @@ footer.site a:hover{color:var(--red)}
     </div>
   </section>
 
-  <!-- COMMUNITY STRIP -->
-  <section style="padding:14px 0 6px">
-    <div class="wrap">
-      <div class="strip">
-        <div>
-          <h2>The Discord is where BAAM lives between shows.</h2>
-          <p>Musicians and fans meet, plan events, form bands, share lead sheets, and post photos and clips from shows. Instagram is for announcements — the server is the community.</p>
-        </div>
-        <a class="btn" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord →</a>
-      </div>
-    </div>
-  </section>
 
   <!-- PAST EVENTS -->
   <section class="block" id="past" style="padding-top:34px">
     <div class="wrap">
       <div class="sec-head"><h2>Past Events</h2><span class="count">Recent shows</span></div>
-      <p class="sec-sub">Most recent first — the full archive has every event, with photos and videos.</p>
+      <p class="sec-sub">The full archive has every event.</p>
 
             <div class="mini-grid" id="past-grid">
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="halloweeb.html"><img class="flyer" src="flyers/halloweeb-2026-10-30.png" alt="Halloweeb flyer"></a>
+          <a class="flyer-link" href="halloweeb.html"><img class="flyer" src="flyers/halloweeb-2026-10-30.webp" alt="Halloweeb flyer"></a>
           <h3><a href="halloweeb.html" style="color:inherit">Halloweeb</a></h3>
           <p class="mini-date">Oct 30, 2026</p>
         </article>
@@ -278,29 +314,12 @@ footer.site a:hover{color:var(--red)}
           <p class="mini-date">Sep 12, 2026</p>
         </article>
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="past-events.html#fall-j-rock-fest"><img class="flyer" src="flyers/fall-j-rock-fest-2026-10-03.jpg" alt="Fall J-Rock Fest flyer"></a>
+          <a class="flyer-link" href="past-events.html#fall-j-rock-fest"><img class="flyer" src="flyers/fall-j-rock-fest-2026-10-03.webp" alt="Fall J-Rock Fest flyer"></a>
           <h3>Fall J-Rock Fest</h3>
           <p class="mini-date">Oct 3, 2026</p>
         </article>
       </div>
       <p class="see-all"><a class="btn" href="past-events.html">See all past events →</a></p>
-      <p class="empty-note" id="past-empty">Nothing of this type among the recent shows — <a href="past-events.html">see the full archive</a>.</p>
-    </div>
-  </section>
-
-  <!-- WHAT IS + VIDEO -->
-  <section class="block alt">
-    <div class="wrap two">
-      <div class="prose">
-        <div class="sec-head"><h2>What is live anime music?</h2></div>
-        <p>It's the music of anime, Japanese games, and J-Pop/J-Rock — <b>anisong, theme songs, and soundtracks</b> — played live by real bands: rock bands, jazz and fusion combos, pianists, and chamber players, instead of a DJ track or a recording.</p>
-      </div>
-      <div class="video-box">
-        <span class="type" style="align-self:flex-start">Featured video</span>
-        <h3>The MAGWest Guided Jam Session</h3>
-        <p>Watch BAAM's jam session at MAGWest 2025 — musicians of every level playing Japanese music together. Full-length video on the MAGFest YouTube channel.</p>
-        <a class="btn" href="https://www.youtube.com/watch?v=dbiYqEPXr-E" target="_blank" rel="noopener">Watch on YouTube →</a>
-      </div>
     </div>
   </section>
 
@@ -315,16 +334,23 @@ footer.site a:hover{color:var(--red)}
     </div>
   </section>
 
-  <!-- PARTNERS STRIP -->
-  <section class="block" style="padding:22px 0 44px">
-    <div class="wrap">
-      <div class="sec-head"><h2>Partners</h2></div>
-      <div class="logostrip">
-        <span class="pill">AniClover</span><span class="pill">GG Orchestra</span>
+  <!-- WHAT IS + VIDEO -->
+  <section class="block alt">
+    <div class="wrap two">
+      <div class="prose">
+        <div class="sec-head"><h2>Our mission</h2></div>
+        <p>Bay Area Anime Music celebrates and shares Japanese anime music culture through live concerts and community events, building a network of local musicians and connecting them with Bay Area audiences to foster cross-cultural understanding.</p>
       </div>
-      <p style="margin-top:14px"><a href="#about" style="font-weight:700">About our partners &amp; venues ↓</a></p>
+      <div class="video-box">
+        <span class="type" style="align-self:flex-start">Featured video</span>
+        <h3>The MAGWest Guided Jam Session</h3>
+        <p>BAAM's Guided Jam Session at MAGWest 2025 — open to musicians at any level. Full video on the MAGFest YouTube channel.</p>
+        <a class="btn" href="https://www.youtube.com/watch?v=dbiYqEPXr-E" target="_blank" rel="noopener">Watch on YouTube →</a>
+      </div>
     </div>
   </section>
+
+
 
   <!-- COMMUNITY -->
   <section class="block alt" id="community">
@@ -332,11 +358,11 @@ footer.site a:hover{color:var(--red)}
       <div class="sec-head"><h2>Community</h2><span class="count">Discord is home</span></div>
       <div class="two">
         <div class="prose">
-          <p><b>Bands form here.</b> Many anime bands have formed inside the server — musicians from beginner to professional, playing anime music and genres well beyond it. If you're looking for a band, a collaborator, or a fill-in, this is where to start.</p>
-          <p><b>Playing happens here, too.</b> Members host informal jams at their houses and venues around the Bay, and chamber music sessions among members — when one grows a date, a venue, and an audience, it becomes a listed event above.</p>
+          <p><b>Bands form here.</b> Plenty of anime bands started in the server — beginners to pros, mostly anime music but not only. Looking for a band, a collaborator, or a fill-in? Start here.</p>
+          <p><b>Playing happens here, too.</b> Members host informal jams at their houses and around the Bay, plus chamber music sessions. When a jam grows into a date, a venue, and an audience, it becomes a listed event.</p>
         </div>
         <div class="prose">
-          <p><b>The lead sheet library.</b> The server holds a library of hundreds of lead sheets, contributed by members — some from the group behind VGLS — shared with members through the server. It's how a jam with strangers can still play the song: the charts are there.</p>
+          <p><b>The lead sheet library.</b> The server has a library of hundreds of lead sheets, contributed by members — some from the group behind VGLS. It's how a jam with strangers can still play the song: the charts are there.</p>
           <p style="margin-top:18px"><a class="btn red" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord</a></p>
         </div>
       </div>
@@ -347,12 +373,12 @@ footer.site a:hover{color:var(--red)}
   <section class="block alt" id="get-involved">
     <div class="wrap">
       <div class="sec-head"><h2>Get Involved</h2><span class="count">Volunteer-run</span></div>
-      <p class="sec-sub">BAAM is volunteer-run and community-based — the organizing, promotion, and day-of work behind every show is volunteer labor. There are four ways in:</p>
+      <p class="sec-sub">BAAM runs on volunteers — the organizing, promotion, and day-of work at every show. Four ways to pitch in:</p>
       <div class="gi-grid">
-        <div class="gi"><h3>Play a BAAM show</h3><p>Bands and musicians in the network play BAAM concerts and events. Join the Discord, come to a jam, and get to know the community — that's how lineups come together.</p></div>
-        <div class="gi"><h3>Volunteer your time</h3><p>Help run the shows: event-day help, promotion and flyering, and hosting jam sessions and chamber sessions. One show or ongoing — both matter.</p></div>
-        <div class="gi"><h3>Contribute</h3><p>Lead sheets for the library, photography and video at shows, design, gear and backline, or a space to play in — in-kind contributions keep events possible.</p></div>
-        <div class="gi"><h3>Support BAAM</h3><p>Come to shows, share photos and clips, and support the mission. BAAM is a community nonprofit, and typically takes no cut from musicians except to cover venue and event expense costs.</p></div>
+        <div class="gi"><h3>Play a BAAM show</h3><p>Join the Discord, come to a jam, and get to know people — that's how lineups come together.</p></div>
+        <div class="gi"><h3>Volunteer your time</h3><p>Event-day help, promotion and flyering, hosting jams and chamber sessions. One show or ongoing — both help.</p></div>
+        <div class="gi"><h3>Contribute</h3><p>Lead sheets for the library, photos and video at shows, design, gear and backline, or a space to play in — all of it keeps events going.</p></div>
+        <div class="gi"><h3>Support BAAM</h3><p>Come to shows, share photos and clips. BAAM is a community nonprofit — we don't take a cut from musicians beyond covering venue and event costs.</p></div>
       </div>
       <p style="margin-top:22px" class="prose">The way to start any of these is the same: <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener"><b>join the Discord</b></a> and say hello.</p>
     </div>
@@ -364,7 +390,6 @@ footer.site a:hover{color:var(--red)}
       <div class="sec-head"><h2>About BAAM</h2></div>
       <div class="two">
         <div class="prose">
-          <p>Bay Area Anime Music celebrates and shares Japanese anime music culture through live concerts and community events, building a network of local musicians.</p>
           <p>The BAAM group started as a way for anime bands and musicians to form a network. Concerts and events are few and far between for anime fans outside of the occasional con, so it's difficult for anime musicians to build up credibility or find venues to perform at. BAAM works to resolve that by setting up its own events and concerts to help build a strong community of anime music fans, and helping connect musicians together for collaboration.</p>
           <p>BAAM is a California nonprofit public benefit corporation based in the Bay Area, incorporated July 21, 2025.</p>
         </div>
@@ -379,16 +404,6 @@ footer.site a:hover{color:var(--red)}
         <div class="def"><h3>AniClover</h3><p>Bay Area anikura / DJ nonprofit for anime, Vocaloid, and otaku music. BAAM and AniClover co-presented J-Block Party at DNA Lounge — their first live band event together. <a href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">aniclover.com</a></p></div>
         <div class="def"><h3>GG Orchestra</h3><p>A separate Bay Area game, anime, and film orchestral ensemble — a partner organization with overlapping members. For orchestral concerts and auditions, see <a href="https://ggorchestra.org/" target="_blank" rel="noopener">ggorchestra.org</a>.</p></div>
       </div>
-
-      <h3 style="font-size:22px;font-weight:800;margin-top:30px">Venues we've played</h3>
-      <div class="logostrip" style="margin-top:14px">
-        <span class="pill">Quarter Note Bar &amp; Grill</span>
-        <span class="pill">Tamper Room — Fremont</span>
-        <span class="pill">Newark Pavilion — Newark</span>
-        <span class="pill">DNA Lounge — San Francisco</span>
-        <span class="pill">DoubleTree by Hilton — San Jose (MAGWest)</span>
-        <span class="pill">3350 Scott Blvd, Santa Clara</span>
-      </div>
     </div>
   </section>
 
@@ -396,7 +411,7 @@ footer.site a:hover{color:var(--red)}
   <section class="booking" id="booking">
     <div class="wrap">
       <div class="sec-head"><h2>Booking</h2></div>
-      <p class="sec-sub" style="font-size:17px;max-width:760px">Looking for live anime music for your event? BAAM connects you with a variety of musicians from across our network, from anime and J-Rock to video game music and jazz, for concerts, festivals, conventions, and events. Tell us what you need and we will match you with the right musicians and handle the coordination.</p>
+      <p class="sec-sub" style="font-size:17px;max-width:760px">Need live anime music for your event? BAAM knows musicians across the Bay Area — anime, J-Rock, VGM, jazz. Tell us what you're planning and we'll find the right people and handle the details.</p>
 
       <p style="color:var(--booking-muted);font-size:15px">For booking inquiries, message BAAM on <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram</a> or join our <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a>. Please contact BAAM, not the bands directly.</p>
     </div>
@@ -435,27 +450,5 @@ footer.site a:hover{color:var(--red)}
     </div>
   </div>
 </footer>
-
-<script>
-(function(){
-  var buttons = document.querySelectorAll('.filters button');
-  function apply(filter){
-    buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-filter')===filter ? 'true':'false'); });
-    [['#upcoming-grid','#upcoming-empty'],['#past-grid','#past-empty']].forEach(function(pair){
-      var grid = document.querySelector(pair[0]); if(!grid) return;
-      var visible = 0;
-      grid.querySelectorAll('.card').forEach(function(card){
-        var show = filter==='all' || (card.getAttribute('data-type')||'').split(' ').indexOf(filter) !== -1;
-        card.classList.toggle('hidden-card', !show);
-        if(show) visible++;
-      });
-      var empty = document.querySelector(pair[1]);
-      if(empty) empty.classList.toggle('show', visible===0);
-    });
-  }
-  buttons.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-filter')); }); });
-
-})();
-</script>
 </body>
 </html>
