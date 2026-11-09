@@ -82,6 +82,8 @@ section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-
 /* Event cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
 .card{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px}
+.card a.flyer-link{display:block}
+.card .flyer{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:calc(var(--radius) - 6px)}
 .card.featured{border:2px solid var(--red)}
 .card .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
 .datebox{font-family:"Archivo Narrow",sans-serif;text-align:center;background:var(--ink);color:var(--bg);border-radius:9px;padding:7px 10px;line-height:1.05;flex:none}
@@ -247,6 +249,7 @@ footer.site a:hover{color:var(--red)}
 
       <div class="grid" id="past-grid">
         <article class="card" id="halloweeb" data-type="concert">
+          <a class="flyer-link" href="flyers/halloweeb-2026-10-30.png" target="_blank" rel="noopener"><img class="flyer" src="flyers/halloweeb-2026-10-30.png" alt="Halloweeb flyer"></a>
           <div class="top">
             <div class="datebox"><b>30</b><span>Oct 2026</span></div>
             <span class="type concert">Concert</span>
@@ -261,6 +264,7 @@ footer.site a:hover{color:var(--red)}
           </div>
         </article>
         <article class="card" data-type="concert">
+          <a class="flyer-link" href="flyers/tokyo-arcade-2026-09-26.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/tokyo-arcade-2026-09-26.webp" alt="Tokyo Arcade flyer"></a>
           <div class="top"><div class="datebox"><b>26</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
           <h3>Tokyo Arcade</h3>
           <p class="venue">Quarter Note Bar &amp; Grill</p>
@@ -270,15 +274,17 @@ footer.site a:hover{color:var(--red)}
         </article>
 
         <article class="card" data-type="concert">
+          <a class="flyer-link" href="flyers/j-block-party-2026-09-12.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/j-block-party-2026-09-12.webp" alt="J-Block Party flyer"></a>
           <div class="top"><div class="datebox"><b>12</b><span>Sep 2026</span></div><span class="type concert">Concert</span></div>
           <h3>J-Block Party</h3>
           <p class="venue">DNA Lounge (Above) · San Francisco</p>
-          <p class="detail">BAAM and AniCLover teaming up for their first live band event together — three Bay Area anisong bands in one night.</p>
+          <p class="detail">BAAM and AniClover teaming up for their first live band event together — three Bay Area anisong bands in one night.</p>
           <p class="lineup"><b>Lineup:</b> Aimai Mirai · Petty Tactic · Half Past Midnight</p>
           <div class="foot"><span class="price">$20 / $24 / $32</span><a class="more" href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">Event page →</a></div>
         </article>
 
         <article class="card" data-type="concert">
+          <a class="flyer-link" href="flyers/fall-j-rock-fest-2026-10-03.jpg" target="_blank" rel="noopener"><img class="flyer" src="flyers/fall-j-rock-fest-2026-10-03.jpg" alt="Fall J-Rock Fest flyer"></a>
           <div class="top"><div class="datebox"><b>3</b><span>Oct 2026</span></div><span class="type concert">Concert</span></div>
           <h3>Fall J-Rock Fest</h3>
           <p class="venue">Tamper Room · Fremont</p>
@@ -288,6 +294,7 @@ footer.site a:hover{color:var(--red)}
         </article>
 
         <article class="card" data-type="jam festival">
+          <a class="flyer-link" href="flyers/magwest-jam-2026.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/magwest-jam-2026.webp" alt="MAGWest Jam 2026 flyer"></a>
           <div class="top"><div class="datebox"><b>’24–’26</b><span>MAGWest</span></div><span class="type">Jam Session</span></div>
           <h3>MAGWest Jam Sessions — 2024, 2025, 2026</h3>
           <p class="venue">DoubleTree by Hilton · San Jose</p>
@@ -296,6 +303,7 @@ footer.site a:hover{color:var(--red)}
         </article>
 
         <article class="card" data-type="concert">
+          <a class="flyer-link" href="flyers/rockosplay-2025-07-19.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/rockosplay-2025-07-19.webp" alt="RocKosplay 2025 flyer"></a>
           <div class="top"><div class="datebox"><b>19</b><span>Jul 2025</span></div><span class="type concert">Concert</span></div>
           <h3>RocKosplay 2025</h3>
           <p class="venue">Newark Pavilion · Newark</p>
@@ -305,6 +313,7 @@ footer.site a:hover{color:var(--red)}
         </article>
 
         <article class="card" data-type="jam">
+          <a class="flyer-link" href="flyers/baam-jam-2025-06-14.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/baam-jam-2025-06-14.webp" alt="BAAM Jam flyer"></a>
           <div class="top"><div class="datebox"><b>14</b><span>Jun 2025</span></div><span class="type">Jam Session</span></div>
           <h3>BAAM Jam</h3>
           <p class="venue">Tamper Room Cafe &amp; Gallery · Fremont</p>
@@ -313,6 +322,7 @@ footer.site a:hover{color:var(--red)}
         </article>
 
         <article class="card" data-type="concert">
+          <a class="flyer-link" href="flyers/rockosplay-2024-06-07.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/rockosplay-2024-06-07.webp" alt="RocKosplay 2024 flyer"></a>
           <div class="top"><div class="datebox"><b>7</b><span>Jun 2024</span></div><span class="type concert">Concert</span></div>
           <h3>RocKosplay 2024</h3>
           <p class="venue">3350 Scott Blvd, Building 54 · Santa Clara</p>
@@ -322,17 +332,19 @@ footer.site a:hover{color:var(--red)}
         </article>
 
         <article class="card" data-type="karaoke">
-          <div class="top"><div class="datebox"><b>♪</b><span>Event</span></div><span class="type">Live Band Karaoke</span></div>
+          <a class="flyer-link" href="flyers/rockaraoke-2024-08-10.webp" target="_blank" rel="noopener"><img class="flyer" src="flyers/rockaraoke-2024-08-10.webp" alt="RocKaraoke flyer"></a>
+          <div class="top"><div class="datebox"><b>10</b><span>Aug 2024</span></div><span class="type">Live Band Karaoke</span></div>
           <h3>RocKaraoke</h3>
-          <p class="venue">Date and venue not published</p>
+          <p class="venue">Homestead Bowl &amp; X-Bar, Cupertino</p>
           <p class="detail">Karaoke with a real band behind you — sing anime favorites with live musicians instead of a backing track.</p>
           <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">See the Instagram Highlight →</a></div>
         </article>
 
         <article class="card" data-type="concert">
-          <div class="top"><div class="datebox"><b>♪</b><span>Event</span></div><span class="type concert">Concert</span></div>
+          <a class="flyer-link" href="flyers/acg-rhapsody-2024-10-06.jpg" target="_blank" rel="noopener"><img class="flyer" src="flyers/acg-rhapsody-2024-10-06.jpg" alt="ACG Rhapsody flyer"></a>
+          <div class="top"><div class="datebox"><b>6</b><span>Oct 2024</span></div><span class="type concert">Concert</span></div>
           <h3>ACG Rhapsody</h3>
-          <p class="venue">Date and venue not published</p>
+          <p class="venue">Baylands Park Grove, Sunnyvale</p>
           <p class="detail">One of BAAM's concert events, archived in the @bayareaanimemusic Instagram Highlights.</p>
           <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">See the Instagram Highlight →</a></div>
         </article>
@@ -373,7 +385,7 @@ footer.site a:hover{color:var(--red)}
     <div class="wrap">
       <div class="sec-head"><h2>Partners</h2></div>
       <div class="logostrip">
-        <span class="pill">AniCLover</span><span class="pill">GG Orchestra</span>
+        <span class="pill">AniClover</span><span class="pill">GG Orchestra</span>
       </div>
       <p style="margin-top:14px"><a href="#about" style="font-weight:700">About our partners &amp; venues ↓</a></p>
     </div>
@@ -454,7 +466,7 @@ footer.site a:hover{color:var(--red)}
 
       <h3 style="font-size:22px;font-weight:800;margin-top:38px">Partners</h3>
       <div class="deflist">
-        <div class="def"><h3>AniCLover</h3><p>Bay Area anikura / DJ nonprofit for anime, Vocaloid, and otaku music. BAAM and AniCLover co-presented J-Block Party at DNA Lounge — their first live band event together. <a href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">aniclover.com</a></p></div>
+        <div class="def"><h3>AniClover</h3><p>Bay Area anikura / DJ nonprofit for anime, Vocaloid, and otaku music. BAAM and AniClover co-presented J-Block Party at DNA Lounge — their first live band event together. <a href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">aniclover.com</a></p></div>
         <div class="def"><h3>GG Orchestra</h3><p>A separate Bay Area game, anime, and film orchestral ensemble — a partner organization with overlapping members. For orchestral concerts and auditions, see <a href="https://ggorchestra.org/" target="_blank" rel="noopener">ggorchestra.org</a>.</p></div>
       </div>
 
@@ -475,7 +487,6 @@ footer.site a:hover{color:var(--red)}
     <div class="wrap">
       <div class="sec-head"><h2>Booking</h2></div>
       <p class="sec-sub" style="font-size:17px;max-width:760px">Looking for live anime music for your event? BAAM connects you with a variety of musicians from across our network, from anime and J-Rock to video game music and jazz, for concerts, festivals, conventions, and events. Tell us what you need and we will match you with the right musicians and handle the coordination.</p>
-      <p style="color:var(--booking-muted);font-size:15px;margin-bottom:26px">Past projects: MAGWest Jam · Tokyo Arcade · RocKosplay · Fall J-Rock Fest · J-Block Party</p>
 
       <p style="color:var(--booking-muted);font-size:15px">For booking inquiries, message BAAM on <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram</a> or join our <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a>. Please contact BAAM, not the bands directly.</p>
     </div>
