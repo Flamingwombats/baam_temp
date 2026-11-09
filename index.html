@@ -9,7 +9,7 @@
 <meta property="og:description" content="Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians and the live Japanese music scene: concerts, jam sessions, and community events." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bayareaanimemusic.org/" />
-<link rel="icon" href="data:," />
+<link rel="icon" href="baam-logo.jpg" />
 <title>Bay Area Anime Music — Live Anime, J-Rock &amp; VGM in the Bay Area</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,8 +44,9 @@ img{max-width:100%}
 /* Header */
 header.site{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
 .navrow{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
-.brand{font-weight:900;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;line-height:1.05}
-.brand span{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;line-height:1.05}
+.brand-logo{width:44px;height:44px;border-radius:50%;flex:none;display:block}
+.brand-sub{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 nav.main{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
 nav.main a{color:var(--ink);font-weight:600;font-size:14.5px;padding:7px 10px;border-radius:8px;text-decoration:none}
 nav.main a:hover{background:var(--chip);text-decoration:none}
@@ -59,7 +60,10 @@ nav.main a:hover{background:var(--chip);text-decoration:none}
 
 /* Hero */
 .hero{border-bottom:2px solid var(--ink);background:var(--bg2)}
-.hero-inner{padding:52px 0 44px;max-width:820px}
+.hero-inner{display:flex;align-items:center;gap:40px;padding:52px 0 44px;max-width:960px}
+.hero-copy{min-width:0}
+.hero-logo{width:200px;height:200px;border-radius:50%;flex:none;box-shadow:0 10px 34px rgba(0,0,0,.20)}
+@media (max-width:640px){.hero-inner{flex-direction:column;align-items:flex-start;gap:24px}.hero-logo{width:150px;height:150px}}
 .hero h1{font-size:clamp(38px,6.5vw,64px);font-weight:900}
 .hero h1 em{font-style:normal;color:var(--red)}
 .hero .lede{margin-top:16px;font-size:clamp(17px,2.4vw,20px);color:var(--ink2);max-width:640px}
@@ -181,7 +185,7 @@ footer.site a:hover{color:var(--red)}
 
 <header class="site">
   <div class="wrap navrow">
-    <a class="brand" href="#top">Bay Area Anime Music<span>BAAM · Bay Area, CA</span></a>
+    <a class="brand" href="#top"><img class="brand-logo" src="baam-logo.jpg" alt="Bay Area Anime Music logo" width="44" height="44"><span class="brand-text">Bay Area Anime Music<span class="brand-sub">BAAM · Bay Area, CA</span></span></a>
     <nav class="main" aria-label="Main">
       <a href="#events">Events</a>
       <a href="past-events.html">Past Events</a>
@@ -203,14 +207,17 @@ footer.site a:hover{color:var(--red)}
   <!-- HERO -->
   <div class="hero">
     <div class="wrap hero-inner">
-      <h1>Live anime music, played by <em>Bay Area musicians</em>.</h1>
-      <p class="lede">Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians and the live Japanese music scene: concerts, jam sessions, and community events.</p>
-      <div class="cta">
-        <a class="btn red" href="#past">Browse past events</a>
-        <a class="btn" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord</a>
-        <a class="btn ghost" href="#booking">Booking →</a>
+      <div class="hero-copy">
+        <h1>Live anime music, played by <em>Bay Area musicians</em>.</h1>
+        <p class="lede">Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians and the live Japanese music scene: concerts, jam sessions, and community events.</p>
+        <div class="cta">
+          <a class="btn red" href="#past">Browse past events</a>
+          <a class="btn" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord</a>
+          <a class="btn ghost" href="#booking">Booking →</a>
+        </div>
+        <p class="meta">Anisong · J-Rock · J-Pop · VGM · Jazz &amp; Fusion — across the Bay Area</p>
       </div>
-      <p class="meta">Anisong · J-Rock · J-Pop · VGM · Jazz &amp; Fusion — across the Bay Area</p>
+      <img class="hero-logo" src="baam-logo.jpg" alt="Bay Area Anime Music logo" width="200" height="200">
     </div>
   </div>
 

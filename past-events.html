@@ -9,7 +9,7 @@
 <meta property="og:description" content="Every past Bay Area Anime Music event — concerts, jam sessions, and live band karaoke — most recent first." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bayareaanimemusic.org/past-events.html" />
-<link rel="icon" href="data:," />
+<link rel="icon" href="baam-logo.jpg" />
 <title>Past Events — Bay Area Anime Music</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,8 +44,9 @@ img{max-width:100%}
 /* Header */
 header.site{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
 .navrow{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
-.brand{font-weight:900;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;line-height:1.05}
-.brand span{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;line-height:1.05}
+.brand-logo{width:44px;height:44px;border-radius:50%;flex:none;display:block}
+.brand-sub{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 nav.main{display:flex;gap:2px;flex-wrap:wrap;margin-left:auto}
 nav.main a{color:var(--ink);font-weight:600;font-size:14.5px;padding:7px 10px;border-radius:8px;text-decoration:none}
 nav.main a:hover{background:var(--chip);text-decoration:none}
@@ -181,7 +182,7 @@ footer.site a:hover{color:var(--red)}
 
 <header class="site">
   <div class="wrap navrow">
-    <a class="brand" href="index.html">Bay Area Anime Music<span>BAAM · Bay Area, CA</span></a>
+    <a class="brand" href="index.html"><img class="brand-logo" src="baam-logo.jpg" alt="Bay Area Anime Music logo" width="44" height="44"><span class="brand-text">Bay Area Anime Music<span class="brand-sub">BAAM · Bay Area, CA</span></span></a>
     <nav class="main" aria-label="Main">
       <a href="index.html#events">Events</a>
       <a href="past-events.html" aria-current="page">Past Events</a>
