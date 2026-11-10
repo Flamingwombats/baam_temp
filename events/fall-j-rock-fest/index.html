@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<meta name="description" content="A three-band J-Rock bill." />
+<meta property="og:title" content="Fall J-Rock Fest — Bay Area Anime Music" />
+<meta property="og:description" content="A three-band J-Rock bill." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bayareaanimemusic.org/events/fall-j-rock-fest/" />
+<link rel="icon" href="../../baam-logo.jpg" />
+<title>Fall J-Rock Fest — Bay Area Anime Music</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f4ee; --bg2:#efe9dd; --surface:#ffffff; --surface2:#fbf9f4;
+  --ink:#17150f; --ink2:#4a463c; --muted:#6f6a5e; --line:#ddd5c4;
+  --red:#c9331f; --red-dark:#a32716; --teal:#0e6b62; --gold:#b7791f;
+  --nav-bg:rgba(247,244,238,.94); --booking-bg:#14120e; --booking-ink:#f3efe4; --booking-muted:#b9b2a0; --booking-line:#3a362c;
+  --chip:#efe9dd; --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#131210; --bg2:#1b1a16; --surface:#1e1d19; --surface2:#23221d;
+    --ink:#f0ecdf; --ink2:#cfc9b8; --muted:#9d9787; --line:#34322a;
+    --red:#e8604a; --red-dark:#e8604a; --teal:#3fb3a6; --gold:#d9a441;
+    --nav-bg:rgba(19,18,16,.94); --chip:#26241e;
+    --booking-bg:#0c0b09; --booking-ink:#f3efe4; --booking-muted:#a8a292; --booking-line:#2e2b24;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--red);text-decoration-color:rgba(0,0,0,0)}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.12;margin:0;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+img{max-width:100%}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+.navrow{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;line-height:1.05}
+.brand-logo{width:44px;height:44px;border-radius:50%;flex:none;display:block}
+.brand-sub{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+nav.main{display:flex;gap:2px;flex-wrap:wrap;flex-basis:100%}
+nav.main a{color:var(--ink);font-weight:600;font-size:14.5px;padding:7px 10px;border-radius:8px;text-decoration:none}
+nav.main a:hover{background:var(--chip);text-decoration:none}
+.navbtns{display:flex;gap:24px;align-items:center;margin-left:auto;margin-right:16px}
+.icon-link{display:inline-flex;color:var(--ink2);text-decoration:none}
+.icon-link:hover{color:var(--red)}
+.icon-link svg{display:block}
+.btn{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;padding:10px 16px;border-radius:9px;border:2px solid var(--ink);text-decoration:none;cursor:pointer;background:var(--surface);color:var(--ink);transition:transform .12s ease, background .12s ease}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn.dark{background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent}
+.btn.small{padding:7px 12px;font-size:13.5px}
+
+/* Hero */
+.hero{border-bottom:2px solid var(--ink);background:var(--bg2)}
+.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px;padding:240px 0 44px;max-width:960px}
+.hero-copy{min-width:0}
+.hero-logo{width:480px;height:480px;border-radius:50%;flex:none;box-shadow:0 10px 34px rgba(0,0,0,.20)}
+@media (max-width:640px){.hero-inner{flex-direction:column;align-items:center;gap:24px;padding:200px 0 44px}.hero-logo{width:320px;height:320px}}
+.hero h1{font-size:clamp(38px,6.5vw,64px);font-weight:900}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .lede{margin-top:16px;font-size:clamp(17px,2.4vw,20px);color:var(--ink2);max-width:640px}
+.hero .cta{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+.hero .meta{margin-top:22px;font-size:13.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+/* Sections */
+section.block{padding:52px 0}
+section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.sec-head h2{font-size:clamp(26px,4vw,36px);font-weight:800}
+.sec-head .count{font-family:"Archivo Narrow",sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.sec-sub{color:var(--ink2);max-width:680px;margin-bottom:24px}
+
+/* Filters */
+
+/* Event cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px}
+.card a.flyer-link{display:block}
+.card .flyer{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:calc(var(--radius) - 6px)}
+/* Past events preview (mini cards) */
+.mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;max-width:720px}
+.card.mini{padding:10px;gap:8px}
+.card.mini h3{font-size:15px}
+.card.mini .mini-date{font-size:13.5px;color:var(--muted);font-weight:600}
+.see-all{margin-top:20px}
+.card.featured{border:2px solid var(--red)}
+.card .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.datebox{font-family:"Archivo Narrow",sans-serif;text-align:center;background:var(--ink);color:var(--bg);border-radius:9px;padding:7px 10px;line-height:1.05;flex:none}
+.datebox b{display:block;font-size:19px}
+.datebox span{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.type{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;background:var(--chip);color:var(--ink2);padding:5px 9px;border-radius:999px;white-space:nowrap}
+.type.concert{background:#f6ded9;color:#8f2413}
+@media (prefers-color-scheme: dark){.type.concert{background:#3d211b;color:#f0a08e}}
+.card h3{font-size:20px;font-weight:800}
+.card .venue{font-weight:600;font-size:14.5px;color:var(--ink2)}
+.card .lineup{font-size:15px}
+.card .lineup b{font-weight:700}
+.card .detail{font-size:14.5px;color:var(--ink2)}
+.card .foot{margin-top:auto;padding-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.price{font-weight:800;font-size:15px}
+.card a.more{font-weight:700;font-size:14.5px}
+.hidden-card{display:none}
+.empty-note{display:none;background:var(--surface);border:1.5px dashed var(--line);border-radius:var(--radius);padding:18px;color:var(--ink2);font-size:15px}
+.empty-note.show{display:block}
+
+/* Community strip */
+.strip{background:var(--teal);color:#fff;border-radius:18px;padding:30px 28px;display:grid;grid-template-columns:1.4fr .6fr;gap:22px;align-items:center}
+.strip h2{color:#fff;font-size:clamp(24px,3.6vw,32px);font-weight:800}
+.strip p{color:#dff2ef;margin-top:8px;max-width:560px}
+.strip .btn{background:#fff;border-color:#fff;color:#0b4f47;justify-self:end}
+@media (max-width:720px){.strip{grid-template-columns:1fr}.strip .btn{justify-self:start}}
+
+/* Two-col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:820px){.two{grid-template-columns:1fr}}
+.prose p+p{margin-top:14px}
+.prose{color:var(--ink2)}
+.prose b,.prose strong{color:var(--ink)}
+.video-box{background:var(--ink);color:var(--bg);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px;justify-content:center}
+.video-box h3{font-size:22px}
+.video-box p{color:var(--ink2);font-size:15px}
+@media (prefers-color-scheme: dark){.video-box p{color:#b9b2a0}}
+.video-box .btn{align-self:flex-start;background:var(--red);border-color:var(--red);color:#fff}
+
+/* Bands */
+.band-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.band{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:17px}
+.band h3{font-size:17.5px;font-weight:800}
+.band .genre{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);margin-top:2px}
+.band .played{font-size:14px;color:var(--ink2);margin-top:8px}
+.band .ig{font-size:14px;margin-top:8px;display:inline-block}
+
+/* Logo strips */
+.logostrip{display:flex;gap:10px;flex-wrap:wrap}
+.logostrip .pill{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 16px;font-weight:700;font-size:14.5px}
+
+/* Get involved */
+.gi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.gi{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:20px}
+.gi h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.gi p{font-size:15px;color:var(--ink2)}
+
+/* About lists */
+.deflist{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+.def{background:var(--surface2);border:1.5px solid var(--line);border-radius:var(--radius);padding:18px}
+.def h3{font-size:17px;font-weight:800}
+.def p{font-size:14.5px;color:var(--ink2);margin-top:6px}
+
+/* Booking */
+section.booking{background:var(--booking-bg);color:var(--booking-ink);padding:60px 0}
+section.booking .sec-head h2{color:var(--booking-ink)}
+section.booking .sec-head .count{color:#e8604a}
+section.booking .sec-sub{color:var(--booking-muted)}
+section.booking h3{color:var(--booking-ink)}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin:20px 0 30px}
+.proj{border:1.5px solid var(--booking-line);border-radius:var(--radius);padding:18px;background:rgba(255,255,255,.02)}
+.proj h3{font-size:17px;font-weight:800}
+.proj p{font-size:14.5px;color:var(--booking-muted);margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:14px 0 30px}
+.step{border-top:3px solid #e8604a;padding-top:12px}
+.step b{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#e8604a}
+.step p{font-size:15px;color:var(--booking-muted);margin-top:5px}
+/* Footer */
+footer.site{border-top:2px solid var(--ink);padding:38px 0 46px;background:var(--bg2)}
+.foot-grid{display:flex;gap:28px;flex-wrap:wrap;justify-content:space-between}
+footer.site h3{font-size:18px;font-weight:900}
+footer.site p,footer.site a{font-size:14.5px;color:var(--ink2)}
+footer.site a:hover{color:var(--red)}
+.foot-links{display:flex;flex-direction:column;gap:5px}
+.foot-bottom{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+
+/* ============================================================
+   Mobile refinements — Past Events archive (max-width: 640px)
+   Added 2026-11-09 from the mobile-design evaluation.
+   Desktop (641px+) is untouched.
+   ============================================================ */
+@media (max-width:640px){
+  /* --- Page margins: the core ask — reclaim horizontal space --- */
+  .wrap{padding:0 12px}
+  section.block{padding:28px 0}
+  /* The archive section carries inline style="padding-top:34px",
+     which beats any stylesheet rule, so this override needs
+     !important. */
+  section#past{padding-top:28px !important}
+
+  /* --- Sticky header: slimmer chrome on mobile --- */
+  .navrow{gap:10px;padding:10px 0}
+  .brand{font-size:17px;gap:9px}
+  .brand-logo{width:36px;height:36px}
+  nav.main a{padding:10px 10px;font-size:14px}
+  .navbtns{gap:6px}
+  .btn.small{padding:10px 14px}
+
+  /* --- Filters: real touch targets --- */
+  .filters{gap:8px;margin:14px 0 16px}
+  .filters button{padding:11px 15px}
+
+  /* --- Grid: single column; removes the 320px minimum that
+         overflows on small screens --- */
+  .grid{grid-template-columns:1fr;gap:12px}
+
+  /* --- Cards: less padding, tighter gaps, slightly smaller title --- */
+  .card{padding:14px;gap:8px}
+  .card h3{font-size:18px}
+
+  /* --- Series (grouped) boxes --- */
+  .series{padding:12px;gap:10px}
+  .series-toggle{padding:12px 2px}
+  .series-toggle .series-title{font-size:17px}
+  .series-sub{font-size:13.5px}
+  .series-thumbs{gap:10px}
+  .thumb{width:80px}
+  .thumb img{width:80px}
+  .thumb span{font-size:12px}
+
+  /* --- Carousel stage: 44px arrows, tighter gaps --- */
+  .series-stage{gap:8px}
+  .stage-nav{width:44px;height:44px;font-size:24px}
+
+  /* --- Footer + empty state --- */
+  footer.site{padding:28px 0 32px}
+  .foot-grid{gap:20px}
+  .empty-note{padding:14px}
+}
+
+/* On phones (<=640px): the stage card is too narrow for its
+   datebox + type pill beside two 44px arrows, so stack the card
+   full-width above the arrows. */
+@media (max-width:640px){
+  .series-stage{flex-wrap:wrap;justify-content:center}
+  .stage-cards{flex:1 1 100%;order:-1}
+}
+
+/* Event detail page */
+.event{display:grid;grid-template-columns:minmax(0,520px) 1fr;gap:28px;align-items:start}
+.event-flyer{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius)}
+.event h1{font-size:clamp(28px,4.5vw,40px);font-weight:900;margin:12px 0 0}
+.event .venue{font-weight:600;font-size:16px;color:var(--ink2);margin-top:8px}
+.event .detail{font-size:15.5px;color:var(--ink2);margin-top:12px}
+.event .lineup{font-size:15.5px;margin-top:12px}
+.event .foot{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.event .details{margin-top:18px}
+.event .details dt{font-weight:800}
+.event .details dd{margin:0 0 8px}
+.event .band{margin-bottom:16px}
+.event .band h3{font-size:19px;margin-bottom:4px}
+.event .band p{font-size:15px;color:var(--ink2)}
+@media (max-width:820px){.event{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap navrow">
+    <a class="brand" href="../../index.html"><img class="brand-logo" src="../../baam-logo.jpg" alt="Bay Area Anime Music logo" width="44" height="44"><span class="brand-text">Bay Area Anime Music<span class="brand-sub">BAAM · Bay Area, CA</span></span></a>
+    <div class="navbtns">
+      <a class="icon-link" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885 1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.007-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.029 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.029ZM8.02 15.33c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg></a>
+      <a class="icon-link" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+    </div>
+    <nav class="main" aria-label="Main">
+      <a href="../../index.html#events">Events</a>
+      <a href="../../past-events.html">Past Events</a>
+      <a href="../../community.html">Community</a>
+      <a href="../../bands.html">Bands & Musicians</a>
+      <a href="../../about.html">About</a>
+      <a href="../../booking.html">Booking</a><a href="../../support.html">Support</a><a href="../../resources.html">Resources</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="block" id="event" style="padding-top:34px">
+    <div class="wrap">
+      <p><a href="../../past-events.html" style="font-weight:700">← Back to Past Events</a></p>
+      <div class="event" style="margin-top:18px">
+        <img class="event-flyer" src="../../flyers/fall-j-rock-fest-2026-10-03.webp" alt="Fall J-Rock Fest flyer">
+        <div>
+          <div class="top"><div class="datebox"><b>3</b><span>Oct 2026</span></div><span class="type">Concert</span></div>
+          <h1>Fall J-Rock Fest</h1>
+          <p class="venue">Tamper Room · Fremont</p>
+          <p class="detail">A three-band J-Rock bill.</p>
+          <p class="lineup"><b>Lineup:</b> Food Coma · Petty Tactic · Aimai Mirai</p>
+          <div class="foot"><a class="more" href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Photos on Instagram →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="max-width:340px">
+        <h3>Bay Area Anime Music</h3>
+        <p style="margin-top:8px">California nonprofit public benefit corporation.</p>
+      </div>
+      <div class="foot-links">
+        <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Site</b>
+        <a href="../../index.html#events">Events</a><a href="../../past-events.html">Past Events</a><a href="../../community.html">Community</a><a href="../../bands.html">Bands & Musicians</a><a href="../../about.html">About</a><a href="../../booking.html">Booking</a><a href="../../support.html">Support</a><a href="../../resources.html">Resources</a>
+      </div>
+      <div class="foot-links">
+        <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Follow &amp; join</b>
+        <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram — @bayareaanimemusic</a>
+        <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord — join the server</a>
+        <a href="https://facebook.com/people/Bay-Area-Anime-Music/61563620396709/" target="_blank" rel="noopener">Facebook — Bay Area Anime Music</a>
+        <a href="https://x.com/BAAM_animemusic" target="_blank" rel="noopener">X — @BAAM_animemusic</a>
+        <a href="https://www.threads.net/@bayareaanimemusic" target="_blank" rel="noopener">Threads — @bayareaanimemusic</a>
+        <a href="https://www.youtube.com/@bayareaanimemusic" target="_blank" rel="noopener">YouTube — @bayareaanimemusic</a>
+        <a href="https://www.tiktok.com/@bayareaanimemusic" target="_blank" rel="noopener">TikTok — @bayareaanimemusic</a>
+      </div>
+      <div class="foot-links">
+        <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Contact</b>
+        <p>General questions: join the <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a> or message <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">@bayareaanimemusic</a>.<br>Email: <a href="mailto:bayareaanimemusic@outlook.com">bayareaanimemusic@outlook.com</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Bay Area Anime Music · Community nonprofit</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

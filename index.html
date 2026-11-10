@@ -63,10 +63,10 @@ nav.main a:hover{background:var(--chip);text-decoration:none}
 
 /* Hero */
 .hero{border-bottom:2px solid var(--ink);background:var(--bg2)}
-.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px;padding:160px 0 44px;max-width:960px}
+.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:32px;padding:240px 0 44px;max-width:960px}
 .hero-copy{min-width:0}
-.hero-logo{width:360px;height:360px;border-radius:50%;flex:none;box-shadow:0 10px 34px rgba(0,0,0,.20)}
-@media (max-width:640px){.hero-inner{flex-direction:column;align-items:center;gap:24px}.hero-logo{width:240px;height:240px}}
+.hero-logo{width:480px;height:480px;border-radius:50%;flex:none;box-shadow:0 10px 34px rgba(0,0,0,.20)}
+@media (max-width:640px){.hero-inner{flex-direction:column;align-items:center;gap:24px;padding:200px 0 44px}.hero-logo{width:320px;height:320px}}
 .hero h1{font-size:clamp(38px,6.5vw,64px);font-weight:900}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .hero h1 em{font-style:normal;color:var(--red)}
@@ -256,11 +256,10 @@ footer.site a:hover{color:var(--red)}
     <nav class="main" aria-label="Main">
       <a href="#events">Events</a>
       <a href="past-events.html">Past Events</a>
-      <a href="#community">Community</a>
+      <a href="community.html">Community</a>
       <a href="bands.html">Bands &amp; Musicians</a>
-      <a href="#get-involved">Get Involved</a>
-      <a href="#about">About</a>
-      <a href="#booking">Booking</a>
+      <a href="about.html">About</a>
+      <a href="booking.html">Booking</a><a href="support.html">Support</a><a href="resources.html">Resources</a>
     </nav>
   </div>
 </header>
@@ -270,7 +269,7 @@ footer.site a:hover{color:var(--red)}
   <!-- HERO -->
   <div class="hero">
     <div class="wrap hero-inner">
-      <img class="hero-logo" src="baam-logo.jpg" alt="Bay Area Anime Music logo" width="360" height="360">
+      <img class="hero-logo" src="baam-logo.jpg" alt="Bay Area Anime Music logo" width="480" height="480">
       <div class="hero-copy">
         <h1 class="sr-only">Bay Area Anime Music</h1>
         <p class="lede">Bay Area Anime Music (BAAM) is a nonprofit network of anime musicians putting on live concerts, jam sessions, and community events.</p>
@@ -285,7 +284,7 @@ footer.site a:hover{color:var(--red)}
 
       <div class="grid" id="upcoming-grid">
       </div>
-      <p class="empty-note show" id="upcoming-empty">No upcoming events are listed right now. New events are planned in the Discord.</p>
+      <p class="empty-note show" id="upcoming-empty">No upcoming events are listed right now. New events are planned in the Discord. Want to add a new event? Contact us on <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a> or email <a href="mailto:bayareaanimemusic@outlook.com">bayareaanimemusic@outlook.com</a>.</p>
     </div>
   </section>
 
@@ -297,121 +296,27 @@ footer.site a:hover{color:var(--red)}
 
             <div class="mini-grid" id="past-grid">
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="halloweeb.html"><img class="flyer" src="flyers/halloweeb-2026-10-30.webp" alt="Halloweeb flyer"></a>
-          <h3><a href="halloweeb.html" style="color:inherit">Halloweeb</a></h3>
+          <a class="flyer-link" href="events/halloweeb/"><img loading="lazy" class="flyer" src="flyers/halloweeb-2026-10-30.webp" alt="Halloweeb flyer"></a>
+          <h3><a href="events/halloweeb/" style="color:inherit">Halloweeb</a></h3>
           <p class="mini-date">Oct 30, 2026</p>
         </article>
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="past-events.html#tokyo-arcade"><img class="flyer" src="flyers/tokyo-arcade-2026-09-26.webp" alt="Tokyo Arcade flyer"></a>
+          <a class="flyer-link" href="events/tokyo-arcade/"><img loading="lazy" class="flyer" src="flyers/tokyo-arcade-2026-09-26.webp" alt="Tokyo Arcade flyer"></a>
           <h3>Tokyo Arcade</h3>
           <p class="mini-date">Sep 26, 2026</p>
         </article>
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="past-events.html#j-block-party"><img class="flyer" src="flyers/j-block-party-2026-09-12.webp" alt="J-Block Party flyer"></a>
+          <a class="flyer-link" href="events/j-block-party/"><img loading="lazy" class="flyer" src="flyers/j-block-party-2026-09-12.webp" alt="J-Block Party flyer"></a>
           <h3>J-Block Party</h3>
           <p class="mini-date">Sep 12, 2026</p>
         </article>
         <article class="card mini" data-type="concert">
-          <a class="flyer-link" href="past-events.html#fall-j-rock-fest"><img class="flyer" src="flyers/fall-j-rock-fest-2026-10-03.webp" alt="Fall J-Rock Fest flyer"></a>
+          <a class="flyer-link" href="events/fall-j-rock-fest/"><img loading="lazy" class="flyer" src="flyers/fall-j-rock-fest-2026-10-03.webp" alt="Fall J-Rock Fest flyer"></a>
           <h3>Fall J-Rock Fest</h3>
           <p class="mini-date">Oct 3, 2026</p>
         </article>
       </div>
       <p class="see-all"><a class="btn" href="past-events.html">See all past events →</a></p>
-    </div>
-  </section>
-
-  <!-- RECENT BANDS STRIP -->
-  <section class="block" style="padding:40px 0 8px">
-    <div class="wrap">
-      <div class="sec-head"><h2>Recently at BAAM</h2><span class="count">Bands</span></div>
-      <div class="logostrip">
-        <span class="pill">Merry Go Station</span><span class="pill">Guy Jeans</span><span class="pill">Velvet Turtles</span><span class="pill">Food Coma</span><span class="pill">Petty Tactic</span><span class="pill">Aimai Mirai</span>
-      </div>
-      <p style="margin-top:14px"><a href="bands.html" style="font-weight:700">Full bands &amp; musicians directory →</a></p>
-    </div>
-  </section>
-
-  <!-- WHAT IS + VIDEO -->
-  <section class="block alt">
-    <div class="wrap two">
-      <div class="prose">
-        <div class="sec-head"><h2>Our mission</h2></div>
-        <p>Bay Area Anime Music celebrates and shares Japanese anime music culture through live concerts and community events, building a network of local musicians and connecting them with Bay Area audiences to foster cross-cultural understanding.</p>
-      </div>
-      <div class="video-box">
-        <span class="type" style="align-self:flex-start">Featured video</span>
-        <h3>The MAGWest Guided Jam Session</h3>
-        <p>BAAM's Guided Jam Session at MAGWest 2025 — open to musicians at any level. Full video on the MAGFest YouTube channel.</p>
-        <a class="btn" href="https://www.youtube.com/watch?v=dbiYqEPXr-E" target="_blank" rel="noopener">Watch on YouTube →</a>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- COMMUNITY -->
-  <section class="block alt" id="community">
-    <div class="wrap">
-      <div class="sec-head"><h2>Community</h2><span class="count">Discord is home</span></div>
-      <div class="two">
-        <div class="prose">
-          <p><b>Bands form here.</b> Plenty of anime bands started in the server — beginners to pros, mostly anime music but not only. Looking for a band, a collaborator, or a fill-in? Start here.</p>
-          <p><b>Playing happens here, too.</b> Members host informal jams at their houses and around the Bay, plus chamber music sessions. When a jam grows into a date, a venue, and an audience, it becomes a listed event.</p>
-        </div>
-        <div class="prose">
-          <p><b>The lead sheet library.</b> The server has a library of hundreds of lead sheets, contributed by members — some from the group behind VGLS. It's how a jam with strangers can still play the song: the charts are there.</p>
-          <p style="margin-top:18px"><a class="btn red" href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Join the Discord</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GET INVOLVED -->
-  <section class="block alt" id="get-involved">
-    <div class="wrap">
-      <div class="sec-head"><h2>Get Involved</h2><span class="count">Volunteer-run</span></div>
-      <p class="sec-sub">BAAM runs on volunteers — the organizing, promotion, and day-of work at every show. Four ways to pitch in:</p>
-      <div class="gi-grid">
-        <div class="gi"><h3>Play a BAAM show</h3><p>Join the Discord, come to a jam, and get to know people — that's how lineups come together.</p></div>
-        <div class="gi"><h3>Volunteer your time</h3><p>Event-day help, promotion and flyering, hosting jams and chamber sessions. One show or ongoing — both help.</p></div>
-        <div class="gi"><h3>Contribute</h3><p>Lead sheets for the library, photos and video at shows, design, gear and backline, or a space to play in — all of it keeps events going.</p></div>
-        <div class="gi"><h3>Support BAAM</h3><p>Come to shows, share photos and clips. BAAM is a community nonprofit.</p></div>
-      </div>
-      <p style="margin-top:22px" class="prose">The way to start any of these is the same: <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener"><b>join the Discord</b></a> and say hello.</p>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="block" id="about">
-    <div class="wrap">
-      <div class="sec-head"><h2>About BAAM</h2></div>
-      <div class="two">
-        <div class="prose">
-          <p>The BAAM group started as a way for anime bands and musicians to form a network. Concerts and events are few and far between for anime fans outside of the occasional con, so it's difficult for anime musicians to build up credibility or find venues to perform at. BAAM works to resolve that by setting up its own events and concerts to help build a strong community of anime music fans, and helping connect musicians together for collaboration.</p>
-          <p>BAAM is a California nonprofit public benefit corporation based in the Bay Area, incorporated July 21, 2025.</p>
-        </div>
-        <div class="prose">
-          <p style="margin-top:14px"><b>Find BAAM</b></p>
-          <p>Instagram is the fastest way to follow show announcements: <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">@bayareaanimemusic</a>. The community itself is on <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a>.</p>
-        </div>
-      </div>
-
-      <h3 style="font-size:22px;font-weight:800;margin-top:38px">Partners</h3>
-      <div class="deflist">
-        <div class="def"><h3>AniClover</h3><p>Bay Area anikura / DJ nonprofit for anime, Vocaloid, and otaku music. BAAM and AniClover co-presented J-Block Party at DNA Lounge — their first live band event together. <a href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">aniclover.com</a></p></div>
-        <div class="def"><h3>GG Orchestra</h3><p>A separate Bay Area game, anime, and film orchestral ensemble — a partner organization with overlapping members. For orchestral concerts and auditions, see <a href="https://ggorchestra.org/" target="_blank" rel="noopener">ggorchestra.org</a>.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BOOKING — separate, minimal -->
-  <section class="booking" id="booking">
-    <div class="wrap">
-      <div class="sec-head"><h2>Booking</h2></div>
-      <p class="sec-sub" style="font-size:17px;max-width:760px">Need live anime music for your event? BAAM knows musicians across the Bay Area — anime, J-Rock, VGM, jazz. Tell us what you're planning and we'll find the right people and handle the details.</p>
-
-      <p style="color:var(--booking-muted);font-size:15px">For booking inquiries, message BAAM on <a href="https://www.instagram.com/bayareaanimemusic/" target="_blank" rel="noopener">Instagram</a> or join our <a href="https://discord.gg/dnWDffKZxg" target="_blank" rel="noopener">Discord</a>. Please contact BAAM, not the bands directly.</p>
     </div>
   </section>
 
@@ -426,7 +331,7 @@ footer.site a:hover{color:var(--red)}
       </div>
       <div class="foot-links">
         <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Site</b>
-        <a href="#events">Events</a><a href="past-events.html">Past Events</a><a href="#community">Community</a><a href="bands.html">Bands &amp; Musicians</a><a href="#get-involved">Get Involved</a><a href="#about">About</a><a href="#booking">Booking</a>
+        <a href="#events">Events</a><a href="past-events.html">Past Events</a><a href="community.html">Community</a><a href="bands.html">Bands &amp; Musicians</a><a href="about.html">About</a><a href="booking.html">Booking</a><a href="support.html">Support</a><a href="resources.html">Resources</a>
       </div>
       <div class="foot-links">
         <b style="font-size:14px;letter-spacing:.08em;text-transform:uppercase">Follow &amp; join</b>
