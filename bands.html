@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="Bands and musicians who have played BAAM events, most recent first." />
+<meta name="description" content="Bands and musicians who have played BAAM events — most frequent first, then most recent." />
 <meta property="og:title" content="Bands &amp; Musicians — Bay Area Anime Music" />
-<meta property="og:description" content="Bands and musicians who have played BAAM events, most recent first." />
+<meta property="og:description" content="Bands and musicians who have played BAAM events — most frequent first, then most recent." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bayareaanimemusic.org/bands.html" />
 <link rel="icon" href="baam-logo.jpg" />
@@ -140,6 +140,16 @@ section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-
 .band .genre{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);margin-top:2px}
 .band .played{font-size:14px;color:var(--ink2);margin-top:8px}
 .band .ig{font-size:14px;margin-top:8px;display:inline-block}
+.band-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.band-head h3{margin:0}
+.kind{flex-shrink:0;display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--chip);color:var(--ink2);margin-top:3px}
+.band .yt{font-size:14px;margin-top:8px;display:inline-block}
+.band.extra{display:none}
+.band-grid.show-all .band.extra{display:block}
+.show-more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font:inherit;font-weight:700;font-size:15px;padding:11px 18px;border-radius:999px;border:2px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
+.show-more:hover{background:var(--chip)}
+.show-more .arrow{display:inline-block;transition:transform .2s}
+.show-more[aria-expanded="true"] .arrow{transform:rotate(180deg)}
 
 /* Logo strips */
 .logostrip{display:flex;gap:10px;flex-wrap:wrap}
@@ -271,24 +281,35 @@ footer.site a:hover{color:var(--red)}
     <div class="wrap">
       <p><a href="index.html" style="font-weight:700">← Back to home</a></p>
       <div class="sec-head"><h2>Bands &amp; Musicians</h2><span class="count">From BAAM event lineups</span></div>
-      <p class="sec-sub">Groups who have played BAAM events, most recent first.</p>
-      <div class="band-grid">
-        <div class="band"><h3>Merry Go Station</h3><p class="genre">J-Rock · Anime · VGM covers</p><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/merrygostation.band/" target="_blank" rel="noopener">@merrygostation.band</a></div>
-        <div class="band"><h3>Guy Jeans</h3><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/guy_jeans_official/" target="_blank" rel="noopener">@guy_jeans_official</a></div>
-        <div class="band"><h3>Velvet Turtles</h3><p class="played">Played: Halloweeb — Oct 30, 2026</p><a class="ig" href="https://www.instagram.com/velvetturtlesband/" target="_blank" rel="noopener">@velvetturtlesband</a></div>
-        <div class="band"><h3>Food Coma</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · RocKosplay 2025</p><a class="ig" href="https://www.instagram.com/foodcoma_band/" target="_blank" rel="noopener">@foodcoma_band</a></div>
-        <div class="band"><h3>Petty Tactic</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · J-Block Party — Sep 12, 2026</p><a class="ig" href="https://www.instagram.com/pettytacticband/" target="_blank" rel="noopener">@pettytacticband</a></div>
-        <div class="band"><h3>Aimai Mirai</h3><p class="played">Played: Fall J-Rock Fest — Oct 2026 · J-Block Party — Sep 12, 2026 · RocKosplay 2024</p><a class="ig" href="https://www.instagram.com/aimai_mirai/" target="_blank" rel="noopener">@aimai_mirai</a></div>
-        <div class="band"><h3>Press Start</h3><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
-        <div class="band"><h3>Interstellar Soundscapes</h3><p class="genre">Jazz · Fusion</p><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
-        <div class="band"><h3>Studio Phoebe</h3><p class="played">Played: Tokyo Arcade — Sep 26, 2026</p></div>
-        <div class="band"><h3>Half Past Midnight</h3><p class="played">Played: J-Block Party — Sep 12, 2026</p></div>
-        <div class="band"><h3>Kill the Protagonist</h3><p class="played">Played: RocKosplay 2025 · RocKosplay 2024</p></div>
-        <div class="band"><h3>Project Idol</h3><p class="played">Played: RocKosplay 2025</p></div>
-        <div class="band"><h3>Otaku Ongaku</h3><p class="played">Played: RocKosplay 2025</p></div>
-        <div class="band"><h3>Still Deer</h3><p class="played">Played: RocKosplay 2024</p></div>
-        <div class="band"><h3>Medium Spicy</h3><p class="played">Played: RocKosplay 2024</p></div>
+      <p class="sec-sub">Groups and solo musicians who have played BAAM events — ordered by shows played and recency.</p>
+      <div class="band-grid" id="band-grid">
+        <div class="band"><div class="band-head"><h3>Aimai Mirai</h3><span class="kind">Band</span></div><p class="genre">Anisong</p><p class="played">Played: Fall J-Rock Fest 10/3/26 · J-Block Party 9/12/26 · Winter J-Rock Fest 1/24/26 · RocKaraoke 8/10/24 · RocKosplay 2024 6/7/24</p><a class="ig" href="https://www.instagram.com/aimai_mirai/" target="_blank" rel="noopener">@aimai_mirai</a></div>
+        <div class="band"><div class="band-head"><h3>raidsrc</h3><span class="kind">Individual</span></div><p class="genre">Anime · VGM piano</p><p class="played">Played: Dueling Pianos @ MAGWest 8/15/26 · MAGWest Jam 2026 8/15/26 · Dueling Pianos @ Fanime 5/23/26 · ACG Rhapsody 10/6/24 · RocKaraoke 8/10/24</p><a class="yt" href="https://www.youtube.com/c/raidsrc" target="_blank" rel="noopener">YouTube</a></div>
+        <div class="band"><div class="band-head"><h3>Petty Tactic</h3><span class="kind">Band</span></div><p class="genre">J-Music covers</p><p class="played">Played: Fall J-Rock Fest 10/3/26 · J-Block Party 9/12/26 · Spring J-Rock Fest 5/9/26 · Winter J-Rock Fest 1/24/26</p><a class="ig" href="https://www.instagram.com/pettytacticband/" target="_blank" rel="noopener">@pettytacticband</a></div>
+        <div class="band"><div class="band-head"><h3>Half Past Midnight</h3><span class="kind">Band</span></div><p class="genre">J-Rock</p><p class="played">Played: J-Block Party 9/12/26 · Dolce Signal 5/29/26 · Spring J-Rock Fest 5/9/26 · Winter J-Rock Fest 1/24/26</p><a class="ig" href="https://www.instagram.com/halfpastmidnightbando/" target="_blank" rel="noopener">@halfpastmidnightbando</a></div>
+        <div class="band"><div class="band-head"><h3>Guy Jeans</h3><span class="kind">Band</span></div><p class="genre">Anisong · Jazz · City pop · Rock</p><p class="played">Played: Halloweeb 10/30/26 · Rhythm Crossing 6/19/26</p><a class="ig" href="https://www.instagram.com/guy_jeans_official/" target="_blank" rel="noopener">@guy_jeans_official</a></div>
+        <div class="band"><div class="band-head"><h3>eLEDiem Piano</h3><span class="kind">Individual</span></div><p class="genre">Anime · VGM piano</p><p class="played">Played: Dueling Pianos @ MAGWest 8/15/26 · Dueling Pianos @ Fanime 5/23/26</p><a class="yt" href="https://www.youtube.com/@eLEDiemPiano" target="_blank" rel="noopener">@eLEDiemPiano</a></div>
+        <div class="band extra"><div class="band-head"><h3>Food Coma</h3><span class="kind">Band</span></div><p class="genre">Anime · J-Rock</p><p class="played">Played: Fall J-Rock Fest 10/3/26 · RocKosplay 2025 7/19/25</p><a class="ig" href="https://www.instagram.com/foodcoma_band/" target="_blank" rel="noopener">@foodcoma_band</a></div>
+        <div class="band extra"><div class="band-head"><h3>Project Idol</h3><span class="kind">Band</span></div><p class="genre">Anime · J-Rock covers</p><p class="played">Played: Dolce Signal 5/29/26 · RocKosplay 2025 7/19/25 · ACG Rhapsody 10/6/24</p><a class="ig" href="https://www.instagram.com/project.idol.band/" target="_blank" rel="noopener">@project.idol.band</a></div>
+        <div class="band extra"><div class="band-head"><h3>Quintec Music</h3><span class="kind">Individual</span></div><p class="genre">Anime piano</p><p class="played">Played: Dueling Pianos @ MAGWest 8/15/26 · Dueling Pianos @ Fanime 5/23/26</p><a class="yt" href="https://www.youtube.com/@QuintecMusic" target="_blank" rel="noopener">@QuintecMusic</a></div>
+        <div class="band extra"><div class="band-head"><h3>Merry Go Station</h3><span class="kind">Band</span></div><p class="genre">J-Rock · Anime · VGM covers</p><p class="played">Played: Halloweeb 10/30/26</p><a class="ig" href="https://www.instagram.com/merrygostation.band/" target="_blank" rel="noopener">@merrygostation.band</a></div>
+        <div class="band extra"><div class="band-head"><h3>Velvet Turtles</h3><span class="kind">Band</span></div><p class="genre">Garage pop-rock · Anime OST covers</p><p class="played">Played: Halloweeb 10/30/26</p><a class="ig" href="https://www.instagram.com/velvetturtlesband/" target="_blank" rel="noopener">@velvetturtlesband</a></div>
+        <div class="band extra"><div class="band-head"><h3>teramisu</h3><span class="kind">Band</span></div><p class="genre">Vocaloid rock</p><p class="played">Played: Dolce Signal 5/29/26 · Spring J-Rock Fest 5/9/26</p><a class="ig" href="https://www.instagram.com/teramisu_band/" target="_blank" rel="noopener">@teramisu_band</a></div>
+        <div class="band extra"><div class="band-head"><h3>Interstellar Soundscapes</h3><span class="kind">Band</span></div><p class="genre">Jazz · Fusion</p><p class="played">Played: Tokyo Arcade 9/26/26</p><a class="ig" href="https://www.instagram.com/interstellar_soundscapes/" target="_blank" rel="noopener">@interstellar_soundscapes</a></div>
+        <div class="band extra"><div class="band-head"><h3>Press Start</h3><span class="kind">Band</span></div><p class="genre">VGM covers</p><p class="played">Played: Tokyo Arcade 9/26/26</p><a class="ig" href="https://www.instagram.com/press.start.vgm/" target="_blank" rel="noopener">@press.start.vgm</a></div>
+        <div class="band extra"><div class="band-head"><h3>Studio Phoebe</h3><span class="kind">Band</span></div><p class="genre">Anime · VGM · Jazz</p><p class="played">Played: Tokyo Arcade 9/26/26</p><a class="ig" href="https://www.instagram.com/phoebe_c_music/" target="_blank" rel="noopener">@phoebe_c_music</a></div>
+        <div class="band extra"><div class="band-head"><h3>bluefilm</h3><span class="kind">Band</span></div><p class="genre">J-Rock · J-Pop · Math rock</p><p class="played">Played: Spring J-Rock Fest 5/9/26 · Winter J-Rock Fest 1/24/26</p><a class="ig" href="https://www.instagram.com/bluefilm.sj/" target="_blank" rel="noopener">@bluefilm.sj</a></div>
+        <div class="band extra"><div class="band-head"><h3>Matt(ress)</h3><span class="kind">Individual</span></div><p class="genre">Piano · Guitar</p><p class="played">Played: Dueling Pianos @ MAGWest 8/15/26 · Dueling Pianos @ Fanime 5/23/26 · RocKaraoke 8/10/24</p></div>
+        <div class="band extra"><div class="band-head"><h3>Kill the Protagonist</h3><span class="kind">Band</span></div><p class="genre">J-Rock</p><p class="played">Played: RocKosplay 2025 7/19/25 · Albany Library 5/2025 · RocKosplay 2024 6/7/24</p><a class="ig" href="https://www.instagram.com/ktpband/" target="_blank" rel="noopener">@ktpband</a></div>
+        <div class="band extra"><div class="band-head"><h3>Kataoka</h3><span class="kind">DJ</span></div><p class="genre">Anime · J-Pop · EDM</p><p class="played">Played: RocKosplay 2025 7/19/25</p><a class="ig" href="https://www.instagram.com/kataokamusic/" target="_blank" rel="noopener">@kataokamusic</a></div>
+        <div class="band extra"><div class="band-head"><h3>Otaku Ongaku</h3><span class="kind">Band</span></div><p class="genre">Anime covers</p><p class="played">Played: RocKosplay 2025 7/19/25</p><a class="ig" href="https://www.instagram.com/otaku_ongaku/" target="_blank" rel="noopener">@otaku_ongaku</a></div>
+        <div class="band extra"><div class="band-head"><h3>Leap</h3><span class="kind">Band</span></div><p class="genre">Chinese · Japanese music</p><p class="played">Played: ACG Rhapsody 10/6/24</p><a class="ig" href="https://www.instagram.com/leap_band/" target="_blank" rel="noopener">@leap_band</a></div>
+        <div class="band extra"><div class="band-head"><h3>Yoruhato</h3><span class="kind">Band</span></div><p class="genre">J-Rock · J-Pop · Anime covers</p><p class="played">Played: RocKaraoke 8/10/24</p><a class="ig" href="https://www.instagram.com/yoruhato.band/" target="_blank" rel="noopener">@yoruhato.band</a></div>
+        <div class="band extra"><div class="band-head"><h3>Still Deer</h3><span class="kind">Band</span></div><p class="genre">Math rock · Alternative</p><p class="played">Played: RocKosplay 2024 6/7/24</p><a class="ig" href="https://www.instagram.com/still_deer_/" target="_blank" rel="noopener">@still_deer_</a></div>
+        <div class="band extra"><div class="band-head"><h3>Party Sucks!</h3><span class="kind">Band</span></div><p class="played">Played: RocKaraoke 8/10/24</p><a class="ig" href="https://www.instagram.com/partysucksband/" target="_blank" rel="noopener">@partysucksband</a></div>
+        <div class="band extra"><div class="band-head"><h3>Medium Spicy</h3><span class="kind">Band</span></div><p class="genre">Chinese pop</p><p class="played">Played: RocKosplay 2024 6/7/24</p><a class="ig" href="https://www.instagram.com/medium.spicy.band/" target="_blank" rel="noopener">@medium.spicy.band</a></div>
       </div>
+      <button class="show-more" id="band-show-more" type="button" aria-expanded="false"><span class="show-more-label">Show 19 more</span> <span class="arrow" aria-hidden="true">▾</span></button>
       <h3 style="font-size:22px;font-weight:800;margin-top:38px">Partners</h3>
       <div class="deflist">
         <div class="def"><h3>AniClover</h3><p>Bay Area anikura / DJ nonprofit for anime, Vocaloid, and otaku music. BAAM and AniClover co-presented J-Block Party at DNA Lounge — their first live band event together. <a href="https://www.aniclover.com/event/jblock" target="_blank" rel="noopener">aniclover.com</a></p></div>
@@ -349,6 +370,16 @@ footer.site a:hover{color:var(--red)}
     });
   }
   buttons.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-filter')); }); });
+
+  var bandGrid = document.getElementById('band-grid');
+  var moreBtn = document.getElementById('band-show-more');
+  if(bandGrid && moreBtn){
+    moreBtn.addEventListener('click', function(){
+      var expanded = bandGrid.classList.toggle('show-all');
+      moreBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      moreBtn.querySelector('.show-more-label').textContent = expanded ? 'Show less' : 'Show 19 more';
+    });
+  }
 
 })();
 </script>
