@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="Photos from BAAM events — Halloweeb and Fall J-Rock Fest." />
+<meta name="description" content="Photos from BAAM events — Halloweeb, Fall J-Rock Fest, and Tokyo Arcade." />
 <meta property="og:title" content="Gallery — Bay Area Anime Music" />
-<meta property="og:description" content="Photos from BAAM events — Halloweeb and Fall J-Rock Fest." />
+<meta property="og:description" content="Photos from BAAM events — Halloweeb, Fall J-Rock Fest, and Tokyo Arcade." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bayareaanimemusic.org/gallery.html" />
 <link rel="icon" href="baam-logo.jpg" />
@@ -251,6 +251,12 @@ footer.site a:hover{color:var(--red)}
 .g-item img{display:block;width:100%;height:auto}
 .g-item figcaption{padding:12px 14px;font-size:14.5px;color:var(--ink2)}
 .g-item figcaption b{color:var(--ink)}
+.gallery-event{margin-bottom:32px}
+.gallery-pager{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:16px}
+.gallery-pager button{font:inherit;font-weight:700;font-size:14.5px;padding:9px 16px;border-radius:9px;border:2px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
+.gallery-pager button:hover:not(:disabled){background:var(--chip)}
+.gallery-pager button:disabled{opacity:.4;cursor:default}
+.gallery-pager .pg-info{font-size:14px;font-weight:600;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -303,6 +309,11 @@ footer.site a:hover{color:var(--red)}
           <figure class="g-item"><a href="gallery/halloweeb/halloweeb-09.webp" target="_blank" rel="noopener"><img src="gallery/halloweeb/halloweeb-09.webp" alt="Halloweeb, October 30, 2026" loading="lazy"></a></figure>
           <figure class="g-item"><a href="gallery/halloweeb/halloweeb-10.webp" target="_blank" rel="noopener"><img src="gallery/halloweeb/halloweeb-10.webp" alt="Halloweeb, October 30, 2026" loading="lazy"></a></figure>
         </div>
+        <div class="gallery-pager">
+          <button type="button" class="pg-prev" aria-label="Previous page">← Prev</button>
+          <span class="pg-info">Page 1 of 1</span>
+          <button type="button" class="pg-next" aria-label="Next page">Next →</button>
+        </div>
       </div>
 
       <div class="gallery-event" data-event="fall-jrock-fest">
@@ -318,7 +329,6 @@ footer.site a:hover{color:var(--red)}
           <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-07.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-07.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
           <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-08.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-08.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
           <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-09.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-09.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-10.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-10.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
           <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-01.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-01.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
           <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-02.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-02.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
           <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-03.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-03.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
@@ -330,6 +340,12 @@ footer.site a:hover{color:var(--red)}
           <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-09.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-09.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
           <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-10.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-10.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
         </div>
+        <div class="gallery-pager">
+          <button type="button" class="pg-prev" aria-label="Previous page">← Prev</button>
+          <span class="pg-info">Page 1 of 1</span>
+          <button type="button" class="pg-next" aria-label="Next page">Next →</button>
+        </div>
+      </div>
 
       <div class="gallery-event" data-event="tokyo-arcade">
         <h3>Tokyo Arcade — September 26, 2026</h3>
@@ -358,7 +374,11 @@ footer.site a:hover{color:var(--red)}
           <figure class="g-item"><a href="gallery/tokyo-arcade/tokyo-arcade-21.webp" target="_blank" rel="noopener"><img src="gallery/tokyo-arcade/tokyo-arcade-21.webp" alt="Tokyo Arcade, September 26, 2026" loading="lazy"></a></figure>
           <figure class="g-item"><a href="gallery/tokyo-arcade/tokyo-arcade-22.webp" target="_blank" rel="noopener"><img src="gallery/tokyo-arcade/tokyo-arcade-22.webp" alt="Tokyo Arcade, September 26, 2026" loading="lazy"></a></figure>
         </div>
-      </div>
+        <div class="gallery-pager">
+          <button type="button" class="pg-prev" aria-label="Previous page">← Prev</button>
+          <span class="pg-info">Page 1 of 1</span>
+          <button type="button" class="pg-next" aria-label="Next page">Next →</button>
+        </div>
       </div>
     </div>
   </section>
@@ -366,12 +386,44 @@ footer.site a:hover{color:var(--red)}
 
 </main>
 <script>(function(){
+  var PAGE_SIZE = 10;
+  function pageCount(sec){ return Math.ceil(sec.querySelectorAll('.g-item').length / PAGE_SIZE); }
+  function showPage(sec, page){
+    var items = sec.querySelectorAll('.g-item');
+    var total = pageCount(sec);
+    if(page < 1) page = 1;
+    if(page > total) page = total;
+    sec.setAttribute('data-page', page);
+    items.forEach(function(it, i){
+      it.classList.toggle('hidden-card', Math.floor(i / PAGE_SIZE) + 1 !== page);
+    });
+    var pager = sec.querySelector('.gallery-pager');
+    if(pager){
+      pager.querySelector('.pg-info').textContent = 'Page ' + page + ' of ' + total;
+      pager.querySelector('.pg-prev').disabled = (page <= 1);
+      pager.querySelector('.pg-next').disabled = (page >= total);
+      pager.style.display = total > 1 ? '' : 'none';
+    }
+  }
+  document.querySelectorAll('.gallery-event').forEach(function(sec){
+    showPage(sec, 1);
+    var pager = sec.querySelector('.gallery-pager');
+    if(pager){
+      pager.querySelector('.pg-prev').addEventListener('click', function(){
+        showPage(sec, parseInt(sec.getAttribute('data-page'), 10) - 1);
+      });
+      pager.querySelector('.pg-next').addEventListener('click', function(){
+        showPage(sec, parseInt(sec.getAttribute('data-page'), 10) + 1);
+      });
+    }
+  });
   var buttons = document.querySelectorAll('.filters button');
   function apply(filter){
     buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-filter')===filter ? 'true':'false'); });
     document.querySelectorAll('.gallery-event').forEach(function(sec){
       var show = filter==='all' || sec.getAttribute('data-event')===filter;
       sec.classList.toggle('hidden-card', !show);
+      if(show) showPage(sec, 1);
     });
   }
   buttons.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-filter')); }); });
