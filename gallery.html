@@ -417,9 +417,11 @@ footer.site a:hover{color:var(--red)}
     if(pager){
       pager.querySelector('.pg-prev').addEventListener('click', function(){
         showPage(sec, parseInt(sec.getAttribute('data-page'), 10) - 1);
+        sec.scrollIntoView();
       });
       pager.querySelector('.pg-next').addEventListener('click', function(){
         showPage(sec, parseInt(sec.getAttribute('data-page'), 10) + 1);
+        sec.scrollIntoView();
       });
     }
   });
