@@ -395,7 +395,13 @@ footer.site a:hover{color:var(--red)}
     if(page > total) page = total;
     sec.setAttribute('data-page', page);
     items.forEach(function(it, i){
-      it.classList.toggle('hidden-card', Math.floor(i / PAGE_SIZE) + 1 !== page);
+      var onPage = Math.floor(i / PAGE_SIZE) + 1 === page;
+      it.classList.toggle('hidden-card', !onPage);
+      /* Images hidden with display:none never trigger native lazy-loading,
+         so unhiding them on a page change left the new page blank until
+         the user scrolled. Load the visible page's images eagerly. */
+      var img = it.querySelector('img');
+      if(img && onPage) img.loading = 'eager';
     });
     var pager = sec.querySelector('.gallery-pager');
     if(pager){
