@@ -84,6 +84,12 @@ section.block.alt{background:var(--bg2);border-top:1px solid var(--line);border-
 .sec-sub{color:var(--ink2);max-width:680px;margin-bottom:12px}
 
 /* Filters */
+.filters{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0 22px}
+.filters button{font:inherit;font-size:13.5px;font-weight:700;padding:7px 13px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink2);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.band-filters{display:flex;gap:7px;flex-wrap:wrap;margin:4px 0 16px}
+.band-filters button{font:inherit;font-size:13.5px;font-weight:700;padding:7px 13px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink2);cursor:pointer}
+.band-filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
 /* Event cards */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
@@ -316,29 +322,45 @@ footer.site a:hover{color:var(--red)}
         </div>
       </div>
 
-      <div class="gallery-event" data-event="fall-jrock-fest">
+      <div class="gallery-event" data-event="fall-jrock-fest" data-band="all">
         <h3>Fall J-Rock Fest — October 3, 2026</h3>
         <p class="credit">Photos by <a href="https://www.instagram.com/jiashaneva/" target="_blank" rel="noopener">@jiashaneva</a> · Tamper Room, Fremont</p>
+        <div class="band-filters" role="group" aria-label="Filter Fall J-Rock Fest photos by band">
+          <button type="button" data-band="all" aria-pressed="true">All bands</button>
+          <button type="button" data-band="food-coma" aria-pressed="false">Food Coma</button>
+          <button type="button" data-band="aimai-mirai" aria-pressed="false">Aimai Mirai</button>
+          <button type="button" data-band="petty-tactic" aria-pressed="false">Petty Tactic</button>
+        </div>
         <div class="gallery-grid">
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-01.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-01.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-02.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-02.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-03.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-03.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-04.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-04.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-05.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-05.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-06.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-06.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-07.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-07.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-08.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-08.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/food-coma-09.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-09.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-01.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-01.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-02.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-02.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-03.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-03.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-04.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-04.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-05.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-05.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-06.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-06.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-07.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-07.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-08.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-08.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-09.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-09.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
-          <figure class="g-item"><a href="gallery/fall-jrock-fest/aimai-mirai-10.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-10.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="food-coma"><a href="gallery/fall-jrock-fest/food-coma-01.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-01.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="food-coma"><a href="gallery/fall-jrock-fest/food-coma-02.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-02.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="food-coma"><a href="gallery/fall-jrock-fest/food-coma-03.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-03.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="food-coma"><a href="gallery/fall-jrock-fest/food-coma-04.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-04.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="food-coma"><a href="gallery/fall-jrock-fest/food-coma-05.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-05.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="food-coma"><a href="gallery/fall-jrock-fest/food-coma-06.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-06.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="food-coma"><a href="gallery/fall-jrock-fest/food-coma-07.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-07.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="food-coma"><a href="gallery/fall-jrock-fest/food-coma-08.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-08.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="food-coma"><a href="gallery/fall-jrock-fest/food-coma-09.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/food-coma-09.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-01.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-01.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-02.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-02.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-03.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-03.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-04.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-04.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-05.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-05.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-06.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-06.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-07.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-07.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-08.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-08.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-09.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-09.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="aimai-mirai"><a href="gallery/fall-jrock-fest/aimai-mirai-10.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/aimai-mirai-10.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-01.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-01.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-02.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-02.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-03.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-03.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-04.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-04.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-05.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-05.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-06.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-06.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-07.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-07.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-08.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-08.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-09.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-09.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
+          <figure class="g-item" data-band="petty-tactic"><a href="gallery/fall-jrock-fest/petty-tactic-10.webp" target="_blank" rel="noopener"><img src="gallery/fall-jrock-fest/petty-tactic-10.webp" alt="Fall J-Rock Fest, October 3, 2026" loading="lazy"></a></figure>
         </div>
         <div class="gallery-pager">
           <button type="button" class="pg-prev" aria-label="Previous page">← Prev</button>
@@ -386,15 +408,26 @@ footer.site a:hover{color:var(--red)}
 
 </main>
 <script>(function(){
-  var PAGE_SIZE = 10;
-  function pageCount(sec){ return Math.ceil(sec.querySelectorAll('.g-item').length / PAGE_SIZE); }
+  var PAGE_SIZE = 4;
+  /* Items matching the section's active band filter ('all' = every photo).
+     Sections without a band filter (Halloweeb, Tokyo Arcade) have no
+     data-band attribute, so they always return all their photos. */
+  function bandItems(sec){
+    var band = sec.getAttribute('data-band') || 'all';
+    var all = Array.prototype.slice.call(sec.querySelectorAll('.g-item'));
+    if(band === 'all') return all;
+    return all.filter(function(it){ return it.getAttribute('data-band') === band; });
+  }
+  function pageCount(sec){ return Math.ceil(bandItems(sec).length / PAGE_SIZE); }
   function showPage(sec, page){
     var items = sec.querySelectorAll('.g-item');
+    var vis = bandItems(sec);
     var total = pageCount(sec);
     if(page < 1) page = 1;
     if(page > total) page = total;
     sec.setAttribute('data-page', page);
-    items.forEach(function(it, i){
+    items.forEach(function(it){ it.classList.add('hidden-card'); });
+    vis.forEach(function(it, i){
       var onPage = Math.floor(i / PAGE_SIZE) + 1 === page;
       it.classList.toggle('hidden-card', !onPage);
       /* Images hidden with display:none never trigger native lazy-loading,
@@ -425,13 +458,33 @@ footer.site a:hover{color:var(--red)}
       });
     }
   });
+  /* Band filter (Fall J-Rock Fest): narrows that section to one band and
+     resets it to page 1. Pagination counts only the band's photos. */
+  document.querySelectorAll('.band-filters').forEach(function(bf){
+    var sec = bf.closest('.gallery-event');
+    bf.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){
+        sec.setAttribute('data-band', b.getAttribute('data-band'));
+        bf.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+        showPage(sec, 1);
+      });
+    });
+  });
   var buttons = document.querySelectorAll('.filters button');
   function apply(filter){
     buttons.forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-filter')===filter ? 'true':'false'); });
     document.querySelectorAll('.gallery-event').forEach(function(sec){
       var show = filter==='all' || sec.getAttribute('data-event')===filter;
       sec.classList.toggle('hidden-card', !show);
-      if(show) showPage(sec, 1);
+      if(show){
+        /* Switching events resets the band filter to All bands. */
+        var bf = sec.querySelector('.band-filters');
+        if(bf){
+          sec.setAttribute('data-band', 'all');
+          bf.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x.getAttribute('data-band')==='all' ? 'true':'false'); });
+        }
+        showPage(sec, 1);
+      }
     });
   }
   buttons.forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-filter')); }); });
